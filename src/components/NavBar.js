@@ -3,6 +3,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as LogoSvg } from "../Assets/Logo.svg";
+import { Link } from 'react-scroll';
+
 
 function NavBar() {
   const iconStyle = {
@@ -10,12 +13,14 @@ function NavBar() {
   };
   return (
     <header className=" bg-[#191919] p-4">
-      <nav className=" flex  items-center justify-around  ">
-        <div className=" flex text-white">Logo</div>
+      <nav className=" flex  items-center justify-around flex-wrap ">
+        <div className=" flex text-white"><LogoSvg></LogoSvg></div>
         <div className="flex  flex-shrink    ">
-          <ul className="flex gap-6 ">
+          <ul className="flex gap-6 flex-wrap ">
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+            <Link to="course-journey" smooth={true} duration={500}>
               Course Journey
+              </Link>
             </li>
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
               Why Us
@@ -35,7 +40,7 @@ function NavBar() {
           </ul>
         </div>
         <div className="flex items-center flex-wrap flex-shrink gap-6">
-        <div className="flex items-center  flex-shrink">
+        <div className="flex items-center flex-wrap  flex-shrink">
           <FontAwesomeIcon icon={faPhone} style={iconStyle} />
           <div className="text-[#84ED9B]">+911234567890</div>
         </div>

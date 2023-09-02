@@ -2,4 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 /* Import your custom styles */
-@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins&family=Roboto+Slab:wght@100;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Slab:wght@100;400;500;700;800&display=swap');
