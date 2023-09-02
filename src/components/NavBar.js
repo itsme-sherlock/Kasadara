@@ -1,44 +1,53 @@
 // src/components/NavBar.js
 
 import React from "react";
-import {FontAwesomeIcon} from  '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   const iconStyle = {
-    color: '#84ED9B', // Change 'red' to your desired color
+    color: "#84ED9B", // Change 'red' to your desired color
   };
   return (
-    <header className="bg-[#191919] p-4">
-    <nav className="flex justify-center">
-      
-  
-      <ul className="flex gap-6">
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          Course Journey
-        </li>
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          Why Us
-        </li>
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          Upcoming Batch
-        </li>
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          Course Fee
-        </li>
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          Syllabus
-        </li>
-        <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-          FAQ
-        </li>
-      </ul>
-      
-     
-    </nav>
-  </header>
-  
+    <header className=" bg-[#191919] p-4">
+      <nav className=" flex  items-center justify-around  ">
+        <div className=" flex text-white">Logo</div>
+        <div className="flex  flex-shrink    ">
+          <ul className="flex gap-6 ">
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              Course Journey
+            </li>
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              Why Us
+            </li>
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              Upcoming Batch
+            </li>
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              Course Fee
+            </li>
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              Syllabus
+            </li>
+            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+              FAQ
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center flex-wrap flex-shrink gap-6">
+        <div className="flex items-center  flex-shrink">
+          <FontAwesomeIcon icon={faPhone} style={iconStyle} />
+          <div className="text-[#84ED9B]">+911234567890</div>
+        </div>
+        <div className=" border border-white rounded-md px-4 py-2">
+          <button className="text-white">
+            Get in touch
+          </button>
+        </div>
+      </div>
+       
+      </nav>
+    </header>
   );
 }
 
