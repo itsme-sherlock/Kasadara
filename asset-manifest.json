@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kasadara/static/css/main.774065ac.css",
+    "main.js": "/kasadara/static/js/main.92397aab.js",
+    "static/js/787.28e4f1fd.chunk.js": "/kasadara/static/js/787.28e4f1fd.chunk.js",
+    "index.html": "/kasadara/index.html",
+    "main.774065ac.css.map": "/kasadara/static/css/main.774065ac.css.map",
+    "main.92397aab.js.map": "/kasadara/static/js/main.92397aab.js.map",
+    "787.28e4f1fd.chunk.js.map": "/kasadara/static/js/787.28e4f1fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.774065ac.css",
+    "static/js/main.92397aab.js"
+  ]
+}
