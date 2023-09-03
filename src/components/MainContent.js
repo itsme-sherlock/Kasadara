@@ -1,10 +1,11 @@
 import React from "react";
 import { ReactComponent as ChatSvg } from "../Assets/Section 2/All we need from you.svg"; // Replace with the actual path to your SVG file
 import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying commitment.svg";
-import { Element } from "react-scroll";
+
 function MainContent() {
   return (
-    <Element name="course-journey"> <section
+   
+    <section
     className="overflow-auto w-full h-screen text-center "
     style={{
       // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
@@ -67,7 +68,7 @@ function MainContent() {
         Join our BootCamp
       </button>
     </div>
-  </section></Element>
+  </section>
    
   );
 }
