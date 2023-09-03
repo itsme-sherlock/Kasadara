@@ -9,21 +9,18 @@ function WhatWillYouGet() {
     <Element name="course-journey">
         <section>
       <div className="m-16">
-        <h1 className="text-[#323232] font-poppins font-extrabold text-4xl ">
-          What you will get in
-          <span className="text-[#B01873] font-poppins font-extrabold text-4xl">
-           
-            the 18 week
+        <h1 className="text-[#323232] font-poppins font-extrabold text-4xl pr-5">
+          What you will get in<span className="text-[#B01873] font-poppins font-extrabold text-4xl"> the 18 week
           </span>
         </h1>
       </div>
       <div className="mx-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* Row 1 */}
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             <PassionateYouSvg></PassionateYouSvg>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
               Strong and unmatched foundation in UI UX
@@ -33,7 +30,7 @@ function WhatWillYouGet() {
               and set them apart from competition
             </p>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
@@ -44,7 +41,7 @@ function WhatWillYouGet() {
               and set them apart from competition
             </p>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
@@ -57,7 +54,7 @@ function WhatWillYouGet() {
           </div>
 
           {/* Row 2 */}
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
@@ -68,7 +65,7 @@ function WhatWillYouGet() {
               and set them apart from competition
             </p>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
@@ -79,7 +76,7 @@ function WhatWillYouGet() {
               and set them apart from competition
             </p>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
@@ -90,7 +87,7 @@ function WhatWillYouGet() {
               and set them apart from competition
             </p>
           </div>
-          <div className="bg-gray-200 p-4">
+          <div className="p-4">
             <StrongSvg></StrongSvg>
             <p className="text-base font-poppins font-extrabold">
               Strong and unmatched foundation in UI UX

@@ -6,7 +6,7 @@ function MainContent() {
   return (
    
     <section
-    className="overflow-auto w-full h-screen text-center "
+    className="overflow-auto rounded-xl w-full h-screen text-center "
     style={{
       // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
       background:
@@ -48,7 +48,7 @@ function MainContent() {
         </div>
       </div>
     </div>
-    <div className="flex justify-center my-40 items-center gap-6 ">
+    <div className="flex justify-center my-20 items-center gap-6 ">
       <h4 className="font-indie-flower text-white">
         Thank you you are the one
       </h4>
