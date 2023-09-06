@@ -104,7 +104,7 @@ function WhyUs() {
       {/* Row 2 */}
       <div className="w-16 h-16 rounded-full overflow-hidden"><img src={collageImage}
       alt="photoTop"  className="object-center w-full h-full"/></div>
-      <div className="mx-10"></div>
+      <div className="mx-10 "></div>
       <div className="w-28 h-28 rounded-full overflow-hidden"><img src={collageImage}
       alt="photoTop"  className="object-center w-full h-full"/></div>
       {/* Row 3 */}

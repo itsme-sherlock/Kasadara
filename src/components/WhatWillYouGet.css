@@ -1,5 +1,59 @@
-
 .custom-text-color {
-    color: var(--K-black-font, #323232);
-  }
+  color: var(--K-black-font, #323232);
+   
+}
+
+/* Define the custom property */
+:root {
+  --K-grad: linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%);
+}
+
+.theme-pink {
+  background: var(--K-grad, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   
+}
+/*---------------COURSEfEE.JS---------------------*/
+.pink-button{
+  border-radius: 6px;
+border: 1px solid var(--K-black-font, #323232);
+background: linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%);
+color: #FFF;
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+
+}
+.display-card{
+  display: flex;
+height: 336px;
+padding: 24px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+border-radius: 16px;
+background: rgba(242, 242, 242, 0.95);
+
+
+}
+.fees-button{
+  border-radius: 156px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--No-so-white, #D0D0D0);
+font-family: Segoe UI;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
