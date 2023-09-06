@@ -7,6 +7,7 @@ import WhatWillYouGet from './components/WhatWillYouGet';
 import WhyUS from './components/WhyUs';
 import UpcomingBatches from './components/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
+import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
       <WhyUS/>
       <UpcomingBatches/>
       <CourseFee/>
+      <EighteenWeek/>
       
 
       
