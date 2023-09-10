@@ -1,20 +1,20 @@
 import React from "react";
 import collageImage from "../Assets/WhyUs/collage1.png";
-import { useState } from "react";
+// import { useState } from "react";
 
 function WhyUs() {
   
   
   return (
     <section
-      className="overflow-hidden rounded-lg w-full text-center "
+      className="overflow-hidden rounded-lg text-center "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
           "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
       }}
     >
-      <div className="my-6 sm:my-12 flex flex-col items-start ml-4 sm:ml-0 sm:pl-20 w-full  ">
+      <div className="my-6 sm:my-12 flex flex-col items-start ml-4 sm:ml-0 sm:pl-20 sm:w-full  ">
         <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">
           Why Us?
         </h1>
@@ -31,9 +31,9 @@ function WhyUs() {
         </p>
       </div>
 
-      <div className="h-[50%] flex flex-col sm:flex-row items-center my-6 sm:my-24">
+      <div className="flex flex-col justify-around sm:flex-row items-center my-6 sm:my-24">
         {/*video content 👇*/}
-        <div className="container w-[90%] sm:w-[40%] h-full flex justify-center items-center  border border-white mx-20">
+        <div className="container py-16 w-[90%] sm:py-24 sm:w-[40%] h-full flex justify-center items-center  border border-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="72"
@@ -95,7 +95,7 @@ function WhyUs() {
           {/*Play button SVG */}
         </div>
         {/*Grid for photo Frames*/}
-        <div className="my-6 sm:grid flex sm:grid-cols-3 gap-4 ">
+        <div className="my-12 sm:grid flex sm:grid-cols-3 gap-4 ">
           {/* Row 1 */}
           <div className="hidden sm:block"></div>
           <div className="w-14 sm:w-32 h-14 sm:h-32 rounded-full overflow-hidden">

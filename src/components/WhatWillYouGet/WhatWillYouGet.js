@@ -87,8 +87,8 @@ function WhatWillYouGet() {
   return (
     <Element name="course-journey">
         <section className="m-0">
-      <div className="my-16 ml-4 w-full">
-        <h1 className="text-[#323232] w-full font-poppins font-extrabold sm:text-4xl text-2xl pr-5">
+      <div className="my-16 ml-4">
+        <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">
           What you will get in<span className="text-[#B01873] font-poppins font-extrabold sm:text-4xl text-2xl"> the 18 week
           </span>
         </h1>

@@ -17,7 +17,7 @@ function App() {
       <WhyUS/>
       <UpcomingBatches/>
       <CourseFee/>
-      <EighteenWeek/>
+      {/* <EighteenWeek/> */}
       
 
       
