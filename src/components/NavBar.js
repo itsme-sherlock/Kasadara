@@ -15,8 +15,8 @@ function NavBar() {
     <header className=" bg-[#191919] p-4">
       <nav className=" flex  items-center justify-around flex-wrap ">
         <div className=" flex text-white"><LogoSvg></LogoSvg></div>
-        <div className="flex  flex-shrink    ">
-          <ul className="flex gap-6 flex-wrap ">
+        <div className="flex hidden p-4 md:flex ">
+          <ul className="flex gap-6  ">
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
             <Link to="course-journey" smooth={true} duration={500}>
               Course Journey
@@ -39,7 +39,7 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <div className="flex items-center flex-wrap flex-shrink gap-6">
+        <div className="flex items-center flex-wrap flex-shrink gap-6 hidden md:flex">
         <div className="flex items-center flex-wrap  flex-shrink">
           <FontAwesomeIcon icon={faPhone} style={iconStyle} />
           <div className="text-[#84ED9B]">+911234567890</div>

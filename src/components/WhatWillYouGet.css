@@ -2,6 +2,12 @@
   color: var(--K-black-font, #323232);
    
 }
+/*for section to be in full view port*/
+
+.full-viewport {
+  height: 100vh;
+}
+
 
 /* Define the custom property */
 :root {

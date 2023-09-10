@@ -13,11 +13,11 @@ function App() {
     <div>
       <NavBar />
       <MainContent/>
-      <WhatWillYouGet/>
+      {/* <WhatWillYouGet/>
       <WhyUS/>
       <UpcomingBatches/>
       <CourseFee/>
-      <EighteenWeek/>
+      <EighteenWeek/> */}
       
 
       
