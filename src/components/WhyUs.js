@@ -1,39 +1,39 @@
 import React from "react";
-import collageImage from '../Assets/WhyUs/collage1.png'
-
+import collageImage from "../Assets/WhyUs/collage1.png";
+import { useState } from "react";
 
 function WhyUs() {
+  
+  
   return (
     <section
-      className="overflow-auto rounded-lg w-full h-screen text-center "
+      className="overflow-hidden rounded-lg w-full text-center "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
           "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
       }}
     >
-      <div className="my-24 flex-col flex items-start pl-20  ">
+      <div className="my-6 sm:my-12 flex flex-col items-start ml-4 sm:ml-0 sm:pl-20 w-full  ">
         <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">
           Why Us?
         </h1>
         <div className="py-3"></div>
         {/*Empty Space to give sapce bteween*/}
-        <p className="text-white font-poppins font-normal text-xs sm:text-xl flex">
+        <p className="text-white font-poppins font-normal text-xs sm:text-xl text-left">
           Hear from our mentors who have{" "}
           <span className="text-[#84ED9B] font-poppins font-normal text-xs sm:text-xl">
-            {" "}
-            deep expertise in
+            deep expertise in{" "}
+          </span>
+          <span className="text-[#84ED9B] font-poppins font-normal text-xs sm:text-xl">
+            product and service industries
           </span>
         </p>
-        <p className="text-[#84ED9B] font-poppins font-normal text-xs sm:text-xl">
-          {" "}
-          product and service industries
-        </p>
       </div>
-      
-      <div className="h-[50%] flex items-center">
+
+      <div className="h-[50%] flex flex-col sm:flex-row items-center my-6 sm:my-24">
         {/*video content 👇*/}
-        <div className="container w-[50%] h-full flex justify-center items-center  border border-white mx-20">
+        <div className="container w-[90%] sm:w-[40%] h-full flex justify-center items-center  border border-white mx-20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="72"
@@ -94,24 +94,45 @@ function WhyUs() {
           </svg>
           {/*Play button SVG */}
         </div>
-        <div className="grid grid-cols-3 gap-4">
-           {/* Row 1 */}
-      <div className=''></div>
-      <div className="w-32 h-32 rounded-full overflow-hidden"><img src={collageImage}
-      alt="photoTop"  className="object-center w-full h-full"/></div>
-      <div className=""></div>
-      
-      {/* Row 2 */}
-      <div className="w-16 h-16 rounded-full overflow-hidden"><img src={collageImage}
-      alt="photoTop"  className="object-center w-full h-full"/></div>
-      <div className="mx-10 "></div>
-      <div className="w-28 h-28 rounded-full overflow-hidden"><img src={collageImage}
-      alt="photoTop"  className="object-center w-full h-full"/></div>
-      {/* Row 3 */}
-      <div className=""></div>
-      <div className="w-32 h-32 rounded-full overflow-hidden"><img src={collageImage}
-      alt="photoTop"  className="object-center w-full h-full"/></div>
-      <div className=""></div>
+        {/*Grid for photo Frames*/}
+        <div className="my-6 sm:grid flex sm:grid-cols-3 gap-4 ">
+          {/* Row 1 */}
+          <div className="hidden sm:block"></div>
+          <div className="w-14 sm:w-32 h-14 sm:h-32 rounded-full overflow-hidden">
+            <img
+              src={collageImage}
+              alt="photoTop"
+              className="object-center w-full h-full"
+            />
+          </div>
+          <div className="hidden sm:block"></div>
+
+          {/* Row 2 */}
+          <div className="w-14 sm:w-32 h-14 sm:h-32 rounded-full overflow-hidden">
+            <img
+              src={collageImage}
+              alt="photoTop"
+              className="object-center w-full h-full"
+            />
+          </div>
+          <div className="mx-10 hidden sm:block "></div>
+          <div className="w-14 sm:w-32 h-14 sm:h-32 rounded-full overflow-hidden">
+            <img
+              src={collageImage}
+              alt="photoTop"
+              className="object-center w-full h-full"
+            />
+          </div>
+          {/* Row 3 */}
+          <div className="hidden sm:block"></div>
+          <div className="w-14 sm:w-32 h-14 sm:h-32 rounded-full overflow-hidden">
+            <img
+              src={collageImage}
+              alt="photoTop"
+              className="object-center w-full h-full"
+            />
+          </div>
+          <div className=""></div>
         </div>
       </div>
       

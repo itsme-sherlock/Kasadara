@@ -15,9 +15,9 @@ function App() {
       <MainContent/>
       <WhatWillYouGet/>
       <WhyUS/>
-      {/* <UpcomingBatches/>
+      <UpcomingBatches/>
       <CourseFee/>
-      <EighteenWeek/> */}
+      <EighteenWeek/>
       
 
       
