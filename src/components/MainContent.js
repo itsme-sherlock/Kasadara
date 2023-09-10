@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./WhatWillYouGet.css";
+import '../components/WhatWillYouGet/WhatWillYouGet.css'
 import { ReactComponent as ChatSvg } from "../Assets/Section 2/All we need from you.svg"; // Replace with the actual path to your SVG file
 import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying commitment.svg";
 

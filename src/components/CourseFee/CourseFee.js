@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Cards";
-import "../WhatWillYouGet.css";
+import '../WhatWillYouGet/WhatWillYouGet.css'
 import { ReactComponent as GraduateHatSvg } from "../../Assets/CourseFees/SchoolSvg.svg";
 import { ReactComponent as WriteToUsSvg } from "../../Assets/CourseFees/border_color.svg";
 

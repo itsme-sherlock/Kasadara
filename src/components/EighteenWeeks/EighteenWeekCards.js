@@ -1,5 +1,5 @@
 import React from "react";
-import "../WhatWillYouGet.css";
+import '../WhatWillYouGet/WhatWillYouGet.css'
 function Cards({ week, heading, orderedList }) {
   return (
     <div className="eighteen-week-cards">

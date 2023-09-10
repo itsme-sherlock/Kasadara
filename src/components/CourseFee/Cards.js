@@ -1,5 +1,5 @@
 import React from 'react';
-import "../WhatWillYouGet.css";
+import '../WhatWillYouGet/WhatWillYouGet.css'
 const Card = ({ title, fee, description,gst }) => {
   return (
     <div className="card w-[210px] display-card flex flex-col items-stretch  ">

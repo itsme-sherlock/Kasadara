@@ -13,19 +13,19 @@ function WhyUs() {
       }}
     >
       <div className="my-24 flex-col flex items-start pl-20  ">
-        <h1 className="text-white font-poppins font-extrabold text-4xl ">
+        <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">
           Why Us?
         </h1>
         <div className="py-3"></div>
         {/*Empty Space to give sapce bteween*/}
-        <p className="text-white font-poppins font-normal text-xl flex">
+        <p className="text-white font-poppins font-normal text-xs sm:text-xl flex">
           Hear from our mentors who have{" "}
-          <span className="text-[#84ED9B] font-poppins font-normal text-xl">
+          <span className="text-[#84ED9B] font-poppins font-normal text-xs sm:text-xl">
             {" "}
             deep expertise in
           </span>
         </p>
-        <p className="text-[#84ED9B] font-poppins font-normal text-xl">
+        <p className="text-[#84ED9B] font-poppins font-normal text-xs sm:text-xl">
           {" "}
           product and service industries
         </p>
