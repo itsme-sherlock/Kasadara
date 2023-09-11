@@ -2,10 +2,10 @@ import React from "react";
 import FaqVideoFrame from './FaqVideoFrame'
 import FaqAccordian from "./FaqAccordian";
 const Faq = () => {
-  const accordionItems=[
-    {title:'Item 1',content:'Content for Item 1'},
-    {title:'Item 2',content:'Content for Item 2'},
-  ]
+  // const accordionItems=[
+  //   {title:'Item 1',content:'Content for Item 1'},
+  //   {title:'Item 2',content:'Content for Item 2'},
+  // ]
   return (
     // parent Container
     <div>
