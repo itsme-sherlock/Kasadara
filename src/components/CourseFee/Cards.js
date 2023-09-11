@@ -14,7 +14,7 @@ const Card = ({ title, fee, description,gst }) => {
       <p className='text-black text-sm'>{gst}</p>
       {/* join our bootcamp button */}
       <button className='my-4 pink-button
-      h-[34px] sm:h-[50px] w-[164px] sm:w-[170px] font-semibold text-xs sm:text-base'>JOIN OUR BOOTCAMP!</button>
+      h-[34px] sm:h-  [50px] w-[164px] sm:w-[170px] font-semibold text-xs sm:text-base'>JOIN OUR BOOTCAMP!</button>
     </div>
   );
 };

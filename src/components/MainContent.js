@@ -1,27 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 import '../components/WhatWillYouGet/WhatWillYouGet.css'
 import { ReactComponent as ChatSvg } from "../Assets/Section 2/All we need from you.svg"; // Replace with the actual path to your SVG file
 import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying commitment.svg";
 
-function MainContent() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      console.log(window.innerWidth);
-    };
-
-    // Attach an event listener to the window's resize event
-    window.addEventListener("resize", handleResize);
-    console.log("event listner attached");
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      console.log("event listner removed");
-    };
-  }, [windowWidth]);
+function MainContent(windowWidth) {
+  console.log(windowWidth.windowWidth)
 
   return (
     <section
@@ -36,7 +20,7 @@ function MainContent() {
         <div className="text-white font-segoeui font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
           {/* Conditionally render text based on screen size */}
 
-          {window.innerWidth < 640
+          {windowWidth.windowWidth < 640
             ? "Learn UX UI Design"
             : "Master UX UI Design"}
         </div>

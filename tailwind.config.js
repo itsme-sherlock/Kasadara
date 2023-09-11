@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     fontFamily:{
       'poppins':'"Poppins"',
-      'indie-flower':'"Indie Flower"'
+      'indie-flower':'"Indie Flower"',
+      'inter':'"Inter"'
     },
     extend: {},
   },
