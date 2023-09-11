@@ -23,14 +23,14 @@ function UpcomingBatches() {
         <p className="text-[#84cfed] font-poppins font-normal text-xs sm:text-xl"></p>
       </div>
       {/*calender*/}
-      <div className="flex flex-col sm:flex-row items-center sm:pl-20">
+      <div className="flex flex-col items-center sm:flex-row">
         <div className="drop-shadow-2xl">
           <BatchDate className="sm:w-[281px] sm:h-[301px] w-[218px] h-[188px]"></BatchDate>
         </div>
         <div className="drop-shadow-2xl">
           <BatchDate className="sm:w-[281px] sm:h-[301px] w-[218px] h-[188px]"></BatchDate>
         </div>
-        <div className="drop-shadow-2xl hidden sm:block">
+        <div className="drop-shadow-2xl hidden sm:flex">
             <OtherCalenderSvg className="sm:w-[281px] sm:h-[301px] w-[218px] h-[188px]"></OtherCalenderSvg>
         </div>
       </div>

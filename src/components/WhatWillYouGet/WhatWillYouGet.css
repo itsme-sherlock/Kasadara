@@ -1,6 +1,5 @@
 .custom-text-color {
   color: var(--K-black-font, #323232);
-   
 }
 /*for section to be in full view port*/
 
@@ -8,62 +7,62 @@
   height: 100vh;
 }
 
-
 /* Define the custom property */
 :root {
   --K-grad: linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%);
 }
 
 .theme-pink {
-  background: var(--K-grad, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-  
+  background: var(
+    --K-grad,
+    linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*---------------COURSEfEE.JS---------------------*/
-.pink-button{
+.pink-button {
   border-radius: 6px;
-border: 1px solid var(--K-black-font, #323232);
-background: linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%);
-color: #FFF;
-display: flex;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-
-}
-.display-card{
+  border: 1px solid var(--K-black-font, #323232);
+  background: linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%);
+  color: #fff;
   display: flex;
-height: 336px;
-padding: 24px;
-flex-direction: column;
-justify-content: space-between;
-align-items: flex-start;
-border-radius: 16px;
-background: rgba(242, 242, 242, 0.95);
-
-
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
 }
-.fees-button{
+.display-card {
+  display: flex;
+  /* height: 336px; */
+  /* height: 227px;
+  width: 212px; */
+  padding: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(242, 242, 242, 0.95);
+}
+.fees-button {
   border-radius: 156px;
-border: 1px solid rgba(0, 0, 0, 0.10);
-display: flex;
-padding: 4px 8px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-color: var(--No-so-white, #D0D0D0);
-font-family: Segoe UI;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--No-so-white, #d0d0d0);
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 /*------------------18WEEKCARDS------------------------------*/
-.eighteen-week-cards{
+.eighteen-week-cards {
   display: flex;
   width: 300px;
   padding: 16px 16px 32px 16px;
@@ -72,16 +71,15 @@ line-height: normal;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 8px;
-background: var(--K-white, #FFF);
-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
+  background: var(--K-white, #fff);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
 }
-.week-bg{
+.week-bg {
   display: flex;
-padding: 2px 8px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 4px;
-background: rgba(0, 0, 0, 0.05);
-
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
 }
