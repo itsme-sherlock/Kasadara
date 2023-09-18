@@ -4,7 +4,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import MainContent from './components/MainContent';
 import WhatWillYouGet from './components/WhatWillYouGet/WhatWillYouGet';
-import WhyUS from './components/WhyUs';
+import WhyUS from './components/whyus/WhyUs';
 import UpcomingBatches from './components/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
@@ -29,16 +29,30 @@ function App() {
       console.log("event listner removed");
     };
   }, [windowWidth]);
+  const [sectionHeight, setSectionHeight] = useState(0);
+
+  // Calculate the height for the h-screen section
+  useEffect(() => {
+    const navbar = document.querySelector('[data-navbar="sticky"]');
+    const navbarHeight = navbar ? navbar.clientHeight : 0; // Get the navbar height
+
+    const viewportHeight = window.innerHeight;
+    const sectionHeight = viewportHeight - navbarHeight;
+
+    setSectionHeight(sectionHeight);
+  }, []);
   return (
     <div>
       <NavBar />
-      <MainContent windowWidth={windowWidth}/>
-      <WhatWillYouGet/>
+      {/* <MainContent 
+      windowWidth={windowWidth}
+      sectionHeight={sectionHeight}/> */}
+      {/* <WhatWillYouGet/> */}
       <WhyUS/>
-      <UpcomingBatches/>
-      <CourseFee/>
-      <EighteenWeek windowWidth={windowWidth}/>
-      <FaqSection></FaqSection>
+      {/* <UpcomingBatches/> */}
+      {/* <CourseFee/> */}
+      {/* <EighteenWeek windowWidth={windowWidth}/> */}
+      {/* <FaqSection></FaqSection> */}
       
 
       
