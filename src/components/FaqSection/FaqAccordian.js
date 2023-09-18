@@ -1,7 +1,13 @@
 import React from "react";
 import { useState } from "react";
+
 function Accordian({ question, answer }) {
     const [isOpen,setIsOpen]=useState(false);
+    const transitionStyles = {
+  transition: 'max-height 1s ease-in-out',
+  maxHeight: isOpen ? '500px' : '0',
+  overflow: 'hidden',
+};
    
     const toggleAccordion = () => {
         // When called, 'toggleAccordion' changes the value of 'isOpen' from 'true' to 'false' or vice versa
@@ -47,8 +53,15 @@ function Accordian({ question, answer }) {
           <span className="text-sm sm:text-lg">{question}</span>
           <span>{isOpen ? upArrow:downArrow}</span>
         </div>
-        <div className="transition-max-height"></div>
-        {isOpen &&<div className="px-4 py-2 font-normal">{answer}</div>}
+        <div className=""></div>
+        {isOpen && (
+          <div
+            className="px-4 py-2 font-normal"
+            style={transitionStyles}
+          >
+            {answer}
+          </div>
+        )}
       </div>
     </div>
   );
