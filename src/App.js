@@ -43,16 +43,16 @@ function App() {
   }, []);
   return (
     <div>
-      <NavBar />
-      {/* <MainContent 
+      {/* <NavBar />
+      <MainContent 
       windowWidth={windowWidth}
-      sectionHeight={sectionHeight}/> */}
-      {/* <WhatWillYouGet/> */}
+      sectionHeight={sectionHeight}/>
+      <WhatWillYouGet/> */}
       <WhyUS/>
-      {/* <UpcomingBatches/> */}
-      {/* <CourseFee/> */}
-      {/* <EighteenWeek windowWidth={windowWidth}/> */}
-      {/* <FaqSection></FaqSection> */}
+      {/* <UpcomingBatches/>
+      <CourseFee/>
+      <EighteenWeek windowWidth={windowWidth}/>
+      <FaqSection></FaqSection> */}
       
 
       
