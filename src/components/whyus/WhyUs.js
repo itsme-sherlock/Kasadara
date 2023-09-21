@@ -11,7 +11,7 @@ function ImageComponent({
   position,
   experience,
   top,
-  left
+  left,
 }) {
   // Each ImageComponent has its own 'isclicked' state
   const [isclicked, setIsClicked] = useState(false);
@@ -27,26 +27,25 @@ function ImageComponent({
     border: `5px solid transparent`,
     transition: "border 0.3s ease", // Add a transition effect to the border property
   };
-  const userCardStyles={
+  const userCardStyles = {
     borderRadius: "8px",
     background: "var(--K-Green, #0F8C41)",
     boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.10)",
-    left:`${left}px`,
-    top:`${top}px`,
-    opacity: 0,
-    transition: "opacity 0.3s ease",
-
-  }
+    left: `${left}px`,
+    top: `${top}px`,
+    opacity: 0, // Initial opacity value
+    transition: "opacity 0.3s ease", // Opacity transition property
+  };
 
   if (isclicked) {
     borderStyles.border = `10px solid #0F8C41`; // Change the border color when clicked
-    userCardStyles.opacity=1;
+    if (showInfo) {
+      userCardStyles.opacity = 1; // Update opacity when clicked
+    }
   }
   return (
     <div
-      className={`w-14 sm:w-32 h-14 sm:h-32  rounded-full border-2 sm:border-8 ${
-        isclicked ? "border-[#0F8C41]" : ""
-      } overflow-hidden`}
+      className={`w-14 sm:w-32 h-14 sm:h-32  rounded-full border-2 sm:border-8 overflow-hidden`}
       style={borderStyles}
     >
       <div className="">
@@ -64,9 +63,9 @@ function ImageComponent({
         >
           <div className="flex justify-between w-full">
             <p className="text-sm  flex  font-bold text-white">{name}</p>
-            <p
-              className="bg-[#32323261] px-4 text-white text-xs rounded-md"
-            >{experience}</p>
+            <p className="bg-[#32323261] px-4 text-white text-xs rounded-md">
+              {experience}
+            </p>
           </div>
           <p className="text-xs text-white text-opacity-70">{designation}</p>
           <p className="text-xs font-normal text-white text-opacity-70">
@@ -80,6 +79,56 @@ function ImageComponent({
 }
 
 function WhyUs() {
+  const imageData = [
+    // row-1
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 0,
+      left: 300,
+    },
+    null,
+    // row-2
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 150,
+      left: -250,
+    },
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 150,
+      left: 450,
+    },
+    // row-3
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 300,
+      left: 300,
+    },
+    null,
+  ];
   return (
     <section
       className="overflow-hidden  text-center "
@@ -108,60 +157,29 @@ function WhyUs() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-around sm:flex-row items-center my-6 sm:my-24">
+        <div className="flex flex-col justify-around sm:flex-row items-center my-6 -space-x-72">
           {/*video content 👇*/}
+          <div className="w-full h-64 sm:w-1/3 sp border-2">
+            <iframe
+              className=" border-2 w-full h-full"
+              src={`https://www.youtube.com/embed/VIDEO_ID`}
+              title="YouTube video"
+              allowFullScreen
+            ></iframe>
+          </div>
 
           {/*Grid for photo Frames*/}
-          <div className="relative my-12 sm:grid flex sm:grid-cols-3 gap-4 ">
-            {/* Row 1 */}
-            <div className="hidden sm:block"></div>
-            <ImageComponent
-              collageImage={collageImage}
-              name="Mathavan"
-              designation="Developer"
-              company={"Microsoft"}
-              position={"Mentor"}
-              experience={`10+ Years`}
-              top={0}
-              left={300}
-            />
-            <div className="hidden sm:block"></div>
-
-            {/* Row 2 */}
-            <ImageComponent
-              collageImage={collageImage}
-              name="havan"
-              designation="Developer"
-              company={"Microsoft"}
-              position={"Mentor"}
-              experience={`10+ Years`}
-              top={10}
-              left={300}
-            />
-            <div className="mx-10 hidden sm:block "></div>
-            <ImageComponent
-              collageImage={collageImage}
-              name="Athavan"
-              designation="Developer"
-              company={"Microsoft"}
-              position={"Mentor"}
-              experience={`10+ Years`}
-              top={150}
-              left={450}
-            />
-            {/* Row 3 */}
-            <div className="hidden sm:block"></div>
-            <ImageComponent
-              collageImage={collageImage}
-              name="van"
-              designation="Developer"
-              company={"Microsoft"}
-              position={"Mentor"}
-              experience={`10+ Years`}
-              top={300}
-              left={300}
-            />
-            <div className=""></div>
+          <div>
+            <div className="relative my-12 sm:grid flex sm:grid-cols-3 gap-4">
+              {imageData.map((data, index) => {
+                console.log(data);
+                return (
+                  <div key={index}>
+                    {data !== null && <ImageComponent {...data} />}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
