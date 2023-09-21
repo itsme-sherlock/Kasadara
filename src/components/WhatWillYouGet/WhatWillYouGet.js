@@ -93,12 +93,13 @@ function WhatWillYouGet(props) {
   ];
 
   return (
-    <Element name="course-journey">
-      <section className="h-screen max-h-screen ">
-        <div className="mx-4 my-8 sm:mt-20 sm:mx-20"
-        style={{
-          height:`${props.sectionHeight}px`,
-        }}>
+    <Element name="course-journey"
+    style={{
+      height:`${props.sectionHeight}px`,
+    }}>
+      <section className="border-2 border-black mb-10 ">
+        <div className="mx-4 my-8 sm:mt-20 sm:mx-20 "
+        >
           {/* main heading and subheading */}
           <div className="">
             <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">
@@ -155,7 +156,7 @@ function WhatWillYouGet(props) {
                           svg={card.svg}
                         />
                       </div>
-                      <ArrowBetweenCards />
+                      <ArrowBetweenCards className={index === 8 ? 'hidden' : 'block'} />
                     </div>
                   )
               )}

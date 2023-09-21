@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import MainContent from './components/MainContent';
 import WhatWillYouGet from './components/WhatWillYouGet/WhatWillYouGet';
 import WhyUS from './components/whyus/WhyUs';
-import UpcomingBatches from './components/UpcomingBatches';
+import UpcomingBatches from './components/upcomingBatches/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
 import FaqSection from './components/FaqSection/FaqSection'
@@ -52,11 +52,10 @@ function App() {
       <MainContent 
       windowWidth={windowWidth}
       sectionHeight={sectionHeight}/>
-      {/* <WhatWillYouGet/> */}
-      <WhyUS
-      sectionHeight={sectionHeight}/>
-      {/* <UpcomingBatches/> */}
-      {/* <CourseFee/> */}
+      <WhatWillYouGet sectionHeight={sectionHeight}/>
+      <WhyUS    />
+      <UpcomingBatches/>
+      <CourseFee/>
       {/* <EighteenWeek windowWidth={windowWidth}/> */}
       {/* <FaqSection></FaqSection> */}
       

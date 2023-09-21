@@ -1,7 +1,7 @@
 import React from "react";
 import collageImage from "../../Assets/WhyUs/collage1.png";
 import { useState, useRef } from "react";
-import ImagePopUp from "./ImagePopUp";
+// import ImagePopUp from "./ImagePopUp";
 
 function ImageComponent({ collageImage }) {
   // Each ImageComponent has its own 'isclicked' state
@@ -63,7 +63,7 @@ function ImageComponent({ collageImage }) {
 function WhyUs(props) {
   return (
     <section
-      className="overflow-hidden  text-center "
+      className="overflow-hidden  text-center mt-40 "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:

@@ -14,7 +14,7 @@ function CourseFee() {
           "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
       }}
     >
-      <div className="sm:pt-24 flex flex-col sm:flex-row ">
+      <div className="sm:pt-20 sm:pl-16 flex flex-col sm:flex-row ">
         <div className="flex-1 px-4 py-8 text-left">
           {/* section heading */}
         <div className="ml-0">
@@ -30,15 +30,15 @@ function CourseFee() {
         </div>
         {/* price-rate in button */}
         <div
-          className="flex flex-col justify-between py-4 sm:flex-row"
+          className="flex flex-col gap-8 py-4 sm:flex-row"
         >
-          <div className="flex gap-4 justify-between items-center  py-4 ">
+          <div className="flex gap-4 justify-between items-center  py-4 w-[50%] ">
             <p className="text-[#D0D0D0] font-poppins font-normal text-sm sm:text-base ">
               Other Bootcamp Fee
             </p>
             <button className="fees-button bg-[#B1343B]">₹ 80,000</button>
           </div>
-          <div className="flex gap-4 justify-between items-center">
+          <div className="flex gap-4 justify-between items-center w-[35%]">
             <p className="text-[#D0D0D0] font-poppins font-normal text-sm sm:text-base">
               Kasadara
             </p>
@@ -72,11 +72,11 @@ function CourseFee() {
         
         <div className="sm:flex-1  flex flex-col-reverse sm:justify-around">
            {/* write to us section only for small screen */}
-        <div className="flex sm:w-[full] justify-center sm:hidden">
+        <div className="flex sm:w-[full] sm:hidden">
         <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 ">
           <GraduateHatSvg></GraduateHatSvg>
           <p className="text-[#D0D0D0] font-poppins font-normal text-xs sm:text-base py-2">
-            Colleges students can avail scholarships
+            Colleges students can<br></br>avail scholarships
           </p>
           <div className="flex gap-2 items-center">
             <WriteToUsSvg></WriteToUsSvg>

@@ -21,6 +21,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.theme-pink-horn {
+  background: var(
+    --K-grad,
+    linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%)
+  );
+ 
+}
 /*---------------COURSEfEE.JS---------------------*/
 .pink-button {
   border-radius: 6px;

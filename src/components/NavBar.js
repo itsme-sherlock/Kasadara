@@ -14,7 +14,7 @@ function NavBar({ navbarRef }) {
   console.log("navbarRef:", navbarRef);
   return (
     // if you change py-2 here then you have change accordingly in  props.height in MainContent.js
-    <header className=" bg-[#191919] py-2zz sticky top-0 " data-navbar="sticky" ref={navbarRef}>
+    <header className=" bg-[#191919] py-2 z-10 sticky top-0 " data-navbar="sticky" ref={navbarRef}>
       <nav className=" flex  items-center justify-around flex-wrap ">
         <div className=" flex text-white"><LogoSvg></LogoSvg></div>
         <div className="hidden p-4 md:flex ">
