@@ -12,9 +12,9 @@ function MainContent(props) {
 
   return (
     <section
-      className="  w-full  text-center "
+      className="  w-full  text-center border-2 "
       style={{
-        height: `${props.sectionHeight-16}px`,
+        height: `${props.sectionHeight}px`,
         background:
           "var(--grad--dark-K, linear-gradient(295deg, #4C0D3A -8.97%, #3D0C55 94.6%))",
       }}

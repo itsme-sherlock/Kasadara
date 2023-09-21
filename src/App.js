@@ -9,14 +9,14 @@ import UpcomingBatches from './components/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
 import FaqSection from './components/FaqSection/FaqSection'
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 function App() {
   // conditional rendering with different displays
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      console.log(window.innerWidth);
+      console.log("window.innerWidth "+ window.innerWidth);
     };
 
     // Attach an event listener to the window's resize event
@@ -29,26 +29,32 @@ function App() {
       console.log("event listner removed");
     };
   }, [windowWidth]);
+  const navbarRef = useRef(null);
   const [sectionHeight, setSectionHeight] = useState(0);
 
   // Calculate the height for the h-screen section
   useEffect(() => {
-    const navbar = document.querySelector('[data-navbar="sticky"]');
-    const navbarHeight = navbar ? navbar.clientHeight : 0; // Get the navbar height
-
+    const navbar = navbarRef.current;
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;   // Get the navbar height
+    console.log("navbarHeight " + navbarHeight)
+    
     const viewportHeight = window.innerHeight;
+    console.log("viewportHeight " + viewportHeight)
+    
     const sectionHeight = viewportHeight - navbarHeight;
+    console.log("sectionHeight " + sectionHeight)
 
     setSectionHeight(sectionHeight);
   }, []);
   return (
     <div>
-      <NavBar />
-      {/* <MainContent 
+      <NavBar navbarRef={navbarRef}  />
+      <MainContent 
       windowWidth={windowWidth}
-      sectionHeight={sectionHeight}/> */}
+      sectionHeight={sectionHeight}/>
       {/* <WhatWillYouGet/> */}
-      <WhyUS/>
+      <WhyUS
+      sectionHeight={sectionHeight}/>
       {/* <UpcomingBatches/> */}
       {/* <CourseFee/> */}
       {/* <EighteenWeek windowWidth={windowWidth}/> */}
