@@ -1,7 +1,7 @@
 import React from "react";
 import collageImage from "../../Assets/WhyUs/collage1.png";
-import { useState } from "react";
-import ImagePopUp from "./ImagePopUp";
+import { useState} from "react";
+// import ImagePopUp from "./ImagePopUp";
 
 function ImageComponent({
   collageImage,
@@ -23,6 +23,7 @@ function ImageComponent({
     setIsClicked(!isclicked);
     setShowInfo(!showInfo);
   };
+ 
   const borderStyles = {
     border: `5px solid transparent`,
     transition: "border 0.3s ease", // Add a transition effect to the border property
@@ -78,7 +79,7 @@ function ImageComponent({
   );
 }
 
-function WhyUs() {
+function WhyUs(props) {
   const imageData = [
     // row-1
     null,
@@ -131,14 +132,19 @@ function WhyUs() {
   ];
   return (
     <section
-      className="overflow-hidden  text-center "
+      className="overflow-hidden  text-center mt-40 "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
           "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
       }}
     >
-      <div>
+      <div
+        className="border-2"
+        style={{
+          height:`${props.sectionHeight}px`,
+        }}
+      >
         <div className="my-6 sm:my-12 flex flex-col items-start mx-4 sm:ml-0 sm:pl-20 sm:w-full  ">
           <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">
             Why Us?
@@ -157,9 +163,9 @@ function WhyUs() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-around sm:flex-row items-center my-6 -space-x-72">
+        <div className="flex flex-col justify-around sm:flex-row items-center my-6 sm:-space-x-72">
           {/*video content 👇*/}
-          <div className="w-full h-64 sm:w-1/3 sp border-2">
+          <div className="sm:h-64 sm:w-1/3 sp  mx-4">
             <iframe
               className=" border-2 w-full h-full"
               src={`https://www.youtube.com/embed/VIDEO_ID`}
@@ -169,8 +175,8 @@ function WhyUs() {
           </div>
 
           {/*Grid for photo Frames*/}
-          <div>
-            <div className="relative my-12 sm:grid flex sm:grid-cols-3 gap-4">
+          <div className="flex w-full sm:w-fit">
+            <div className="relative my-12 sm:grid flex sm:grid-cols-3 sm:gap-4 w-full sm:w-fit justify-around">
               {imageData.map((data, index) => {
                 console.log(data);
                 return (
