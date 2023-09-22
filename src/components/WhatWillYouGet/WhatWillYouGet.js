@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import Card from "./WhatWillYouGetCard";
 
 function WhatWillYouGet(props) {
+  console.log('What will you get '+ props.sectionHeight)
   // An array of card data (you can replace this with your actual card data)
   // Define an array of card data with different styles and SVGs
   const cards = [
@@ -98,7 +99,7 @@ function WhatWillYouGet(props) {
       height:`${props.sectionHeight}px`,
     }}>
       <section className="border-2 border-black mb-10 ">
-        <div className="mx-4 my-8 sm:mt-20 sm:mx-20 "
+        <div className="flex flex-col mx-4 my-8 sm:mt-20 sm:mx-20 "
         >
           {/* main heading and subheading */}
           <div className="">
@@ -112,21 +113,15 @@ function WhatWillYouGet(props) {
           </div>
           {/* cards sction large screen */}
           <div className="hidden sm:relative lg:block">
-            {/*Passionate you Card (different card than other cards) */}
-            {/* <div className="flex items-end">
-              <PassionateYouSvg />
-              <ArrowWeekJourney className="hidden sm:block" />
-              <ArrowWeekJourneyMobile className="sm:hidden" />
-            </div> */}
             <div className="flex">
-              {/* Generate cards from 1 to 12 */}
+              {/* Generate cards for the first row */}
               {cards.map(
                 (card, index) =>
                   index < 5 && (
                     <div
                       key={index}
                       className={`p-4 ${card.style} ${
-                        index > 0 ? "gap-10" : ""
+                        index > 1 ? "px-10" : ""
                       }`}
                     >
                       <Card
@@ -139,11 +134,11 @@ function WhatWillYouGet(props) {
                   )
               )}
             </div>
-            <div className="h-0 absolute top-24 left-0">
+            <div className="h-0 absolute top-24 left-24">
               <BigArrow className="hidden lg:block" />
             </div>
             <div className="flex overflow-x-auto gap-10 justify-center">
-              {/* Generate cards from 1 to 12 */}
+              {/* Generate cards for the second row */}
               {cards.map(
                 (card, index) =>
                   index > 4 && (

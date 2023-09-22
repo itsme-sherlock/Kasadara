@@ -1,66 +1,135 @@
 import React from "react";
 import collageImage from "../../Assets/WhyUs/collage1.png";
-import { useState, useRef } from "react";
+import { useState} from "react";
 // import ImagePopUp from "./ImagePopUp";
 
-function ImageComponent({ collageImage }) {
+function ImageComponent({
+  collageImage,
+  name,
+  designation,
+  company,
+  position,
+  experience,
+  top,
+  left,
+}) {
   // Each ImageComponent has its own 'isclicked' state
   const [isclicked, setIsClicked] = useState(false);
-  const [showRectangle, setShowRectangle] = useState(false);
-  const [rectanglePosition, setRectanglePosition] = useState({
-    top: 0,
-    left: 0,
-  });
-  const imageRef = useRef(null);
+  const [showInfo, setShowInfo] = useState(false);
+  console.log(showInfo);
 
   const handleClick = () => {
-    console.log("imageRect");
-    setIsClicked(!isclicked); //state is changed therefore the component re renders
-    setShowRectangle(!showRectangle); // Show rectangle when clicked, hide when clicked again
-    if (imageRef.current) {
-      const imageRect = imageRef.current.getBoundingClientRect();
-      console.log("imageRect " + imageRect);
-      setRectanglePosition({
-        top: imageRect.top + window.scrollY,
-        left: imageRect.left + window.scrollX,
-      });
-    }
+    console.log("handleClick called");
+    setIsClicked(!isclicked);
+    setShowInfo(!showInfo);
   };
+ 
   const borderStyles = {
     border: `5px solid transparent`,
     transition: "border 0.3s ease", // Add a transition effect to the border property
   };
+  const userCardStyles = {
+    borderRadius: "8px",
+    background: "var(--K-Green, #0F8C41)",
+    boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.10)",
+    left: `${left}px`,
+    top: `${top}px`,
+    opacity: 0, // Initial opacity value
+    transition: "opacity 0.3s ease", // Opacity transition property
+  };
 
   if (isclicked) {
     borderStyles.border = `10px solid #0F8C41`; // Change the border color when clicked
+    if (showInfo) {
+      userCardStyles.opacity = 1; // Update opacity when clicked
+    }
   }
   return (
     <div
-      className={`w-14 sm:w-32 h-14 sm:h-32 rounded-full border-2 sm:border-8 ${
-        isclicked ? "border-[#0F8C41]" : ""
-      } overflow-hidden`}
+      className={`w-14 sm:w-32 h-14 sm:h-32  rounded-full border-2 sm:border-8 overflow-hidden`}
       style={borderStyles}
     >
-      <img
-        src={collageImage}
-        alt="photoTop"
-        className="object-center w-full h-full hover:cursor-pointer"
-        onClick={handleClick}
-      />
-      {showRectangle && (
+      <div className="">
+        <img
+          src={collageImage}
+          alt="photoTop"
+          className="object-center w-full h-full hover:cursor-pointer"
+          onClick={handleClick}
+        />
+      </div>
+      {showInfo && (
         <div
-          className="bg-red-500 w-16 h-16 absolute top-0 left-0"
-          style={{
-            top: `${rectanglePosition.top}px`,
-            left: `${rectanglePosition.left}px`,
-          }}
-        ></div>
+          className={`absolute flex flex-col items-start w-60 p-4  bg-green-700 text-center mt-2`}
+          style={userCardStyles}
+        >
+          <div className="flex justify-between w-full">
+            <p className="text-sm  flex  font-bold text-white">{name}</p>
+            <p className="bg-[#32323261] px-4 text-white text-xs rounded-md">
+              {experience}
+            </p>
+          </div>
+          <p className="text-xs text-white text-opacity-70">{designation}</p>
+          <p className="text-xs font-normal text-white text-opacity-70">
+            {company}
+          </p>
+          <p className="text-xs font-normal mt-1  text-[#FBFF2F]">{position}</p>
+        </div>
       )}
     </div>
   );
 }
 
 function WhyUs(props) {
+  const imageData = [
+    // row-1
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 0,
+      left: 300,
+    },
+    null,
+    // row-2
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 150,
+      left: -250,
+    },
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 150,
+      left: 450,
+    },
+    // row-3
+    null,
+    {
+      collageImage: collageImage,
+      name: "Mathavan",
+      designation: "Developer",
+      company: "Microsoft",
+      position: "Mentor",
+      experience: "10+ Years",
+      top: 300,
+      left: 300,
+    },
+    null,
+  ];
   return (
     <section
       className="overflow-hidden  text-center mt-40 "
@@ -72,9 +141,9 @@ function WhyUs(props) {
     >
       <div
         className="border-2"
-        style={{
-          height:`${props.sectionHeight}px`,
-        }}
+        // style={{
+        //   height:`${props.sectionHeight}px`,
+        // }}
       >
         <div className="my-6 sm:my-12 flex flex-col items-start mx-4 sm:ml-0 sm:pl-20 sm:w-full  ">
           <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">
@@ -94,24 +163,29 @@ function WhyUs(props) {
           </p>
         </div>
 
-        <div className="flex flex-col justify-around sm:flex-row items-center my-6 sm:my-24">
+        <div className="flex flex-col justify-around sm:flex-row items-center my-6 sm:-space-x-72">
           {/*video content 👇*/}
+          <div className="sm:h-64 sm:w-1/3 sp  mx-4">
+            <iframe
+              className=" border-2 w-full h-full"
+              src={`https://www.youtube.com/embed/VIDEO_ID`}
+              title="YouTube video"
+              allowFullScreen
+            ></iframe>
+          </div>
 
           {/*Grid for photo Frames*/}
-          <div className="my-12 sm:grid flex sm:grid-cols-3 gap-4 ">
-            {/* Row 1 */}
-            <div className="hidden sm:block"></div>
-            <ImageComponent collageImage={collageImage} />
-            <div className="hidden sm:block"></div>
-
-            {/* Row 2 */}
-            <ImageComponent collageImage={collageImage} />
-            <div className="mx-10 hidden sm:block "></div>
-            <ImageComponent collageImage={collageImage} />
-            {/* Row 3 */}
-            <div className="hidden sm:block"></div>
-            <ImageComponent collageImage={collageImage} />
-            <div className=""></div>
+          <div className="flex w-full sm:w-fit">
+            <div className="relative my-12 sm:grid flex sm:grid-cols-3 sm:gap-4 w-full sm:w-fit justify-around">
+              {imageData.map((data, index) => {
+                console.log(data);
+                return (
+                  <div key={index}>
+                    {data !== null && <ImageComponent {...data} />}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

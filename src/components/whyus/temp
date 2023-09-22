@@ -1,0 +1,51 @@
+ <div className="relative my-12 sm:grid flex sm:grid-cols-3 gap-4 ">
+            {/* Row 1 */}
+            <div className="hidden sm:block"></div>
+            <ImageComponent
+              collageImage={collageImage}
+              name="Mathavan"
+              designation="Developer"
+              company={"Microsoft"}
+              position={"Mentor"}
+              experience={`10+ Years`}
+              top={0}
+              left={300}
+            />
+            <div className="hidden sm:block"></div>
+
+            {/* Row 2 */}
+            <ImageComponent
+              collageImage={collageImage}
+              name="havan"
+              designation="Developer"
+              company={"Microsoft"}
+              position={"Mentor"}
+              experience={`10+ Years`}
+              top={10}
+              left={300}
+            />
+            <div className="mx-10 hidden sm:block "></div>
+            <ImageComponent
+              collageImage={collageImage}
+              name="Athavan"
+              designation="Developer"
+              company={"Microsoft"}
+              position={"Mentor"}
+              experience={`10+ Years`}
+              top={150}
+              left={450}
+            />
+            {/* Row 3 */}
+            <div className="hidden sm:block"></div>
+            <ImageComponent
+              collageImage={collageImage}
+              name="van"
+              designation="Developer"
+              company={"Microsoft"}
+              position={"Mentor"}
+              experience={`10+ Years`}
+              top={300}
+              left={300}
+            />
+            <div className=""></div>
+          </div>

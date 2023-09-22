@@ -8,7 +8,7 @@ import WhyUS from './components/whyus/WhyUs';
 import UpcomingBatches from './components/upcomingBatches/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
-import FaqSection from './components/FaqSection/FaqSection'
+// import FaqSection from './components/FaqSection/FaqSection'
 import { useState, useEffect,useRef } from "react";
 function App() {
   // conditional rendering with different displays
