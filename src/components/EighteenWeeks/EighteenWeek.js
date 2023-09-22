@@ -250,7 +250,7 @@ function EighteenWeek({ windowWidth }) {
     <section className="bg-[#F2F2F2]">
       <div className="sm:px-16 sm:py-20">
         {/* TextSection */}
-        <div className="flex flex-col px-4 py-2 ">
+        <div className="flex flex-col px-4 py-4 ">
           {/* Heaading */}
           <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
             The 18 Week
