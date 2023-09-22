@@ -56,7 +56,7 @@ function App() {
       <WhyUS    />
       <UpcomingBatches/>
       <CourseFee/>
-      {/* <EighteenWeek windowWidth={windowWidth}/> */}
+      <EighteenWeek windowWidth={windowWidth}/>
       {/* <FaqSection></FaqSection> */}
       
 

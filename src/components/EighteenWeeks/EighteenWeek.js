@@ -1,6 +1,9 @@
 import React from "react";
 import EighteenWeekCards from './EighteenWeekCards'
 import { MobileCard } from "./EighteenWeekCards";
+import { ReactComponent as MountainClimbing} from "../../Assets/eighteen week/MountainClimbing.svg";
+import { ReactComponent as TirePushing} from "../../Assets/eighteen week/TirePushing.png";
+import { ReactComponent as TirePushingTop} from "../../Assets/eighteen week/TirePushingTop.svg";
 function EighteenWeek({windowWidth}){
    console.log(windowWidth);
     return(
