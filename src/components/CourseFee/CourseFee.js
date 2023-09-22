@@ -57,15 +57,17 @@ function CourseFee() {
             </p>
           </div>
           {/* write to us section for large screens */}
-          <div className="sm:w-[full] justify-center hidden sm:flex">
-            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 gap-3 ">
+          <div className="sm:w-[full] justify-center sm:justify-start hidden sm:flex ">
+            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 gap-3 rounded-md">
               <GraduateHatSvg></GraduateHatSvg>
               <p className="text-[#D0D0D0] font-poppins text-center font-normal text-xs sm:text-base">
                 Colleges students can avail scholarships
               </p>
               <div className="flex gap-1 items-center">
-                <WriteToUsSvg></WriteToUsSvg>
-                <button className="pink-button">Write to us</button>
+                <button className="pink-button">
+                  <WriteToUsSvg></WriteToUsSvg>
+                  Write to us
+                </button>
               </div>
             </div>
           </div>
@@ -73,8 +75,8 @@ function CourseFee() {
 
         <div className="sm:flex-1  flex flex-col-reverse sm:justify-around">
           {/* write to us section only for small screen */}
-          <div className="flex sm:w-[full] justify-center sm:hidden">
-            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 sm:p-4 px-20 py-5 rounded-md bg-black bg-opacity-30 ">
+          <div className="flex sm:w-[full] justify-center sm:justify-start sm:hidden">
+            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 sm:p-4 px-5 py-5 rounded-md bg-black bg-opacity-30 ">
               <GraduateHatSvg></GraduateHatSvg>
               <p className="text-[#D0D0D0] font-poppins font-normal word whitespace-nowrap text-xs sm:text-base py-2 w-full">
                 Colleges students can<br className="sm:block hidden"></br> avail
@@ -87,19 +89,20 @@ function CourseFee() {
             </div>
           </div>
           {/* price-card */}
-          <div className="flex px-4 overflow-x-auto gap-6 sm:justify-around">
-            <div className="">
+          <div className="flex px-4 overflow-x-auto gap-6 ">
+            <div className="whitespace-pre-line">
               <Card
-                title="Two Month Payment Plan"
+                title={`Two Month
+                  Payment Plan`}
                 fee="₹ 27,500"
                 description="Total:  ₹ 55,000"
                 gst="Inclusive of GST"
               />
             </div>
-            <div className="">
+            <div className="whitespace-pre-line">
               <Card
-                title="Single Month
-            Payment Plan"
+                title={`Single Month
+                Payment Plan`}
                 fee="₹ 49,500"
                 description="You will save ₹ 6,000."
                 gst="Inclusive of GST"

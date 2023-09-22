@@ -22,7 +22,7 @@ function UpcomingBatches() {
   ];
   return (
     <section>
-      <div>
+      <div className="mb-20">
         <div className=" my-6 sm:my-24 text-center sm:text-left flex-col flex sm:items-start sm:pl-20  ">
           {/*section heading*/}
           <h1 className="text-black  font-poppins font-extrabold text-2xl sm:text-4xl ">

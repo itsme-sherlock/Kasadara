@@ -141,9 +141,9 @@ function WhyUs(props) {
     >
       <div
         className="border-2"
-        style={{
-          height:`${props.sectionHeight}px`,
-        }}
+        // style={{
+        //   height:`${props.sectionHeight}px`,
+        // }}
       >
         <div className="my-6 sm:my-12 flex flex-col items-start mx-4 sm:ml-0 sm:pl-20 sm:w-full  ">
           <h1 className="text-white font-poppins font-extrabold text-2xl sm:text-4xl ">

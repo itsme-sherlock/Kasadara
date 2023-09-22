@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import Card from "./WhatWillYouGetCard";
 
 function WhatWillYouGet(props) {
+  console.log('What will you get '+ props.sectionHeight)
   // An array of card data (you can replace this with your actual card data)
   // Define an array of card data with different styles and SVGs
   const cards = [
