@@ -1,5 +1,8 @@
 import React from "react";
 import EighteenWeekCards from "./EighteenWeekCards";
+import { ReactComponent as MountainClimbing } from "../../Assets/eighteen week/MountainClimbing.svg";
+import { ReactComponent as TirePushing } from "../../Assets/eighteen week/TirePushing.svg";
+import { ReactComponent as TirePushingTop } from "../../Assets/eighteen week/TirePushingTop.svg";
 import { MobileCard } from "./EighteenWeekCards";
 function EighteenWeek({ windowWidth }) {
   console.log(windowWidth);
@@ -43,17 +46,17 @@ function EighteenWeek({ windowWidth }) {
     },
     {
       week: "Week 4",
-      heading: "UI fundamentals - 1",
+      heading: "Design for Business",
       orderedList: [
-        "Design laws & UX myths ",
-        "Usability Criteria & Heuristics",
-        "Constraints and Errors",
-        "Affordance, signifiers and metaphors",
-        "Psychology of designs - PET",
-        "Colour Theories  & Schemes combination",
-        "Accessible colors - intro",
+        "Innovations - Radical and Incremental",
+        "Stake holder interview.",
+        "Competitor analysis",
+        "Aligning with business goals",
+        "Product  (Vs) Service",
+        "Activity for the week",
       ],
     },
+
     {
       week: "pic",
       heading: "Know thy users",
@@ -181,17 +184,9 @@ function EighteenWeek({ windowWidth }) {
       ],
     },
     {
-      week: "pic",
-      heading: "Know thy users",
-      orderedList: [
-        "Qualitative research methods",
-        "Quantitative research methods",
-        "Profiling",
-        "Personas and scenarios",
-        "Intros to Mapping - Empathy",
-        "User Journey Affinity Mapping",
-        "Activity & Exercise",
-      ],
+      week: "",
+      heading: "",
+      orderedList: <MountainClimbing />,
     },
     {
       week: "Week 2",
@@ -246,10 +241,16 @@ function EighteenWeek({ windowWidth }) {
       ],
     },
   ];
+  // Create a mapping of card indices to custom components
+  const customComponentMap = {
+    4: <TirePushing />, // For card at index 4
+    15: <MountainClimbing />, // For card at index 7
+    // Add more mappings as needed
+  };
   return (
     <section className="bg-[#F2F2F2]">
       <div className="sm:px-16 sm:py-20">
-        {/* TextSection */}
+        {/* TextSection and right SVG image */}
         <div className="flex flex-col px-4 py-4 ">
           {/* Heaading */}
           <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
@@ -263,6 +264,8 @@ function EighteenWeek({ windowWidth }) {
             </span>
           </h4>
           {/* Paragraph Content */}
+          <div className="flex items-center justify-between">
+            
           <p className="custom-text-color text-sm sm:whitespace-nowrap text-left">
             The entire course will be held in weekend to make it feasible for
             working professionals and college students to attend.
@@ -277,17 +280,32 @@ function EighteenWeek({ windowWidth }) {
             We are not rigid with the 18 week plan we are flexible enough to
             extend the duration depends on the students progress{" "}
           </p>
+          <TirePushingTop className="hidden sm:block"/>
+          </div>
         </div>
+
         {/* Grid card section for large screens only */}
         <div className="py-2 ">
           <div className="hidden sm:grid grid-cols-4 gap-4 px-4">
             {cardDetails.map((card, index) => (
-              <div className="" key={index}>
-                <EighteenWeekCards
-                  week={card.week}
-                  heading={card.heading}
-                  orderedList={card.orderedList}
-                />
+              <div
+                className={
+                  // eslint-disable-next-line
+                  index ==
+                  // eslint-disable-next-line
+                  Object.keys(customComponentMap).find((key) => index == key)
+                    ? "flex justify-end"
+                    : null
+                }
+                key={index}
+              >
+                {customComponentMap[index] || (
+                  <EighteenWeekCards
+                    week={card.week}
+                    heading={card.heading}
+                    orderedList={card.orderedList}
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -336,7 +354,7 @@ function EighteenWeek({ windowWidth }) {
           ></MobileCard>
         </div>
         {/* Download Button */}
-        <div className="flex justify-center py-4">
+        <div className="sm:hidden flex justify-center py-4">
           <button className="pink-button font-poppins">
             Download Syllabus
           </button>

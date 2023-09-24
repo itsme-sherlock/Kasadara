@@ -1,69 +1,39 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-function Accordian({ question, answer }) {
-    const [isOpen,setIsOpen]=useState(false);
-    const transitionStyles = {
-  transition: 'max-height 1s ease-in-out',
-  maxHeight: isOpen ? '500px' : '0',
-  overflow: 'hidden',
-};
-   
-    const toggleAccordion = () => {
-        // When called, 'toggleAccordion' changes the value of 'isOpen' from 'true' to 'false' or vice versa
-        setIsOpen(!isOpen);
-        console.log(!isOpen)
-      };
-    const downArrow = (
-        <svg
-        width="14"
-        height="8"
-        viewBox="0 0 14 8"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        //   transform="rotate(180)"
-        >
-        <path
-            d="M7 7.40039L0.937823 0.0503891L13.0622 0.0503902L7 7.40039Z"
-            fill="#323232"
-        />
-        </svg>
-    );
-  const upArrow= (
-    <svg
-      width="14"
-      height="8"
-      viewBox="0 0 14 8"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      transform="rotate(180)"
-    >
-      <path
-        d="M7 7.40039L0.937823 0.0503891L13.0622 0.0503902L7 7.40039Z"
-        fill="#323232"
-      />
-    </svg>
-  );
+function FaqAccordionItem({ question, answer }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div>
-      <div className="border rounded mb-2 font-inter font-medium">
-        <div className="cursor-pointer flex items-center justify-between px-4"
-        onClick={toggleAccordion}>
-          <span className="text-sm sm:text-lg">{question}</span>
-          <span>{isOpen ? upArrow:downArrow}</span>
-        </div>
-        <div className=""></div>
-        {isOpen && (
-          <div
-            className="px-4 py-2 font-normal"
-            style={transitionStyles}
-          >
-            {answer}
-          </div>
-        )}
+    <div className="border-y border-gray-300 p-2 mb-2">
+      <div
+        className="cursor-pointer"
+        onClick={toggleAccordion}
+      >
+        <h3 className="font-semibold font-poppins text-lg">{question}</h3>
       </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="mt-2 font-poppins">{answer}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
-export default Accordian;
+
+export default FaqAccordionItem;
