@@ -4,7 +4,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import MainContent from './components/MainContent';
 import WhatWillYouGet from './components/WhatWillYouGet/WhatWillYouGet';
-import WhyUS from './components/whyus/WhyUs';
+// import WhyUS from './components/whyus/WhyUs';
 import UpcomingBatches from './components/upcomingBatches/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
