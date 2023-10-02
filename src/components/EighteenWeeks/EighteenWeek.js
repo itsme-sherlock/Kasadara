@@ -251,7 +251,7 @@ function EighteenWeek({ windowWidth }) {
     <section className="bg-[#F2F2F2]">
       <div className="sm:px-16 sm:py-20">
         {/* TextSection and right SVG image */}
-        <div className="flex flex-col px-4 py-4 ">
+        <div className="flex flex-col px-4 py-4">
           {/* Heaading */}
           <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
             The 18 Week
@@ -266,7 +266,7 @@ function EighteenWeek({ windowWidth }) {
           {/* Paragraph Content */}
           <div className="flex items-center justify-between">
             
-          <p className="custom-text-color text-sm sm:whitespace-nowrap text-left">
+          <p className="custom-text-color text-sm lg:whitespace-nowrap text-left">
             The entire course will be held in weekend to make it feasible for
             working professionals and college students to attend.
             {windowWidth < 640 ? (
@@ -285,7 +285,7 @@ function EighteenWeek({ windowWidth }) {
         </div>
 
         {/* Grid card section for large screens only */}
-        <div className="py-2 ">
+        <div className="hidden lg:block py-2 ">
           <div className="hidden sm:grid grid-cols-4 gap-4 px-4">
             {cardDetails.map((card, index) => (
               <div
@@ -310,8 +310,8 @@ function EighteenWeek({ windowWidth }) {
             ))}
           </div>
         </div>
-        {/* Grid only for smaller screens */}
-        <div className="flex flex-col items-center sm:hidden">
+        {/* Grid only for smaller/medium screens */}
+        <div className="flex flex-col items-center lg:hidden">
           <MobileCard
             week={"Week 1 - 4"}
             orderedList={[

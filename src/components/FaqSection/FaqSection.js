@@ -2,6 +2,8 @@ import React from "react";
 import { useRef } from "react";
 import FaqVideoFrame from "./FaqVideoFrame";
 import FaqAccordian from "./FaqAccordian";
+import { ReactComponent as LeftArrow } from "../../Assets/Faq/Nav arrow left.svg";
+import { ReactComponent as RightArrow } from "../../Assets/Faq/Navigation arrow right.svg";
 
 const Faq = () => {
   const scroller = useRef(null);
@@ -74,13 +76,13 @@ const Faq = () => {
           <div className="absolute top-0 left-0">
             {/* left button */}
             <button className="" onClick={scrollLeft}>
-              &lt;
+              <LeftArrow></LeftArrow>
             </button>
           </div>
           {/* right buttons */}
           <div className="absolute top-0 right-0">
             <button className="" onClick={scrollRight}>
-              &gt;
+              <RightArrow></RightArrow>
             </button>
           </div>
         </div>

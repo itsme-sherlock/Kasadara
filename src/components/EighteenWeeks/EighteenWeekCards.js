@@ -18,13 +18,13 @@ export function Cards({ week, heading, orderedList }) {
         {heading}
       </div>
       {/* ordered list */}
-      <div className="text-[#323232] font-poppins font-normal text-sm">
+      <ol className=" list-disc ml-4 text-[#323232] font-poppins font-normal text-sm">
         {orderedList.map((item, index) => (
           <li className="mb-2" key={index}>
             {item}
           </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 }
@@ -43,7 +43,9 @@ export function MobileCard({ week, orderedList }) {
       {/* ordered list */}
       <div className="text-[#323232] font-poppins font-normal text-sm">
         {orderedList.map((item, index) => (
-          <li className="mb-2 theme-pink font-semibold text-sm" key={index}>{item}</li>
+          <li className="mb-2 theme-pink font-semibold text-sm" key={index}>
+            {item}
+          </li>
         ))}
       </div>
     </div>

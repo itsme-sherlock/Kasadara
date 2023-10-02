@@ -1,6 +1,7 @@
 import React from "react";
 import "../WhatWillYouGet/WhatWillYouGet.css";
 import Calender from "./Calendar";
+import { Element } from "react-scroll";
 function UpcomingBatches() {
   const CalendarDetails = [
     {
@@ -21,10 +22,10 @@ function UpcomingBatches() {
     },
   ];
   return (
-    <section>
+    <Element name='Upcoming Batch'>
       <div className="mb-20">
         <div className=" my-6 sm:my-24 text-center sm:text-left flex-col flex sm:items-start sm:pl-20  ">
-          {/*section heading*/}
+          {/*Element heading*/}
           <h1 className="text-black  font-poppins font-extrabold text-2xl sm:text-4xl ">
             Upcoming Batches
           </h1>
@@ -41,7 +42,7 @@ function UpcomingBatches() {
           <p className="text-[#84cfed] font-poppins font-normal text-xs sm:text-xl"></p>
         </div>
         {/*calender*/}
-        <div className="flex flex-col items-center justify-center sm:flex-row sm:gap-8 gap-14">
+        <div className="flex flex-col flex-wrap items-center justify-center sm:flex-row sm:gap-8 gap-14">
           {CalendarDetails.map((card, index) => (
             <div key={index} className="drop-shadow-2x">
               <Calender date={card.date} time={card.time} />
@@ -49,7 +50,7 @@ function UpcomingBatches() {
           ))}
         </div>
       </div>
-    </section>
+    </Element>
   );
 }
 

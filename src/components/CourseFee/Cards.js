@@ -3,14 +3,14 @@ import "../WhatWillYouGet/WhatWillYouGet.css";
 const Card = ({ title, fee, description, gst }) => {
   return (
     // Card container
-    <div className=" bg-gray-200 rounded-lg flex flex-col items-center sm:items-start px-3 py-3 sm:px-10">
+    <div className=" bg-gray-200 rounded-lg flex flex-col items-center sm:items-start px-3 py-3 sm:px-6 sm:py-6">
       {/* card title */}
       <h2 className="text-black pb-6 text-base sm:text-2xl font-poppins font-semibold text-start">
         {title}
       </h2>
-      <div className="flex flex-col items-start space-y-2">
+      <div className="flex flex-col sm:items-start items-center">
         {/* fees */}
-        <p className="theme-pink font-poppins font-bold text-2xl sm:text-3xl ">
+        <p className="theme-pink font-bold text-2xl sm:text-4xl ">
           {fee}
         </p>
         {/* description of the fees */}

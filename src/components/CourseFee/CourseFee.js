@@ -14,57 +14,57 @@ function CourseFee() {
           "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
       }}
     >
-      <div className="sm:pt-20 sm:pl-16 flex flex-col sm:flex-row ">
+      <div className="sm:pt-20 sm:pl-16 flex flex-col justify-center lg:flex-row ">
         <div className="flex-1 px-4 py-8 text-left">
           {/* section heading */}
           <div className="ml-0">
             <h1 className="text-[#D0D0D0] font-poppins font-medium text-2xl sm:text-5xl ">
-              Course fee
+              Course Fee
             </h1>
           </div>
           {/* sub heading */}
           <div>
-            <h4 className="text-[#C49485] font-poppins font-normal text-sm sm:text-2xl">
+            <h4 className="text-[#C49485] font-poppins font-normal text-sm sm:text-2xl my-3">
               Affordable education
             </h4>
           </div>
           {/* price-rate in button */}
-          <div className="flex flex-col sm:gap-8 py-4 sm:flex-row">
-            <div className="flex gap-4 justify-between items-center  py-4">
+          <div className="flex flex-col sm:gap-8 sm:flex-row my-3 gap-y-4">
+            <div className="flex gap-4 justify-between items-center">
               <p className="text-[#D0D0D0] font-poppins font-normal text-sm sm:text-base ">
                 Other Bootcamp Fee
               </p>
-              <button className="fees-button bg-[#B1343B] text-xs sm:text-lg sm:font-semibold font-poppins">
+              <button className="fees-button bg-[#B1343B] text-xs sm:text-lg sm:font-semibold">
                 ₹ 80,000
               </button>
             </div>
             <div className="flex gap-4 justify-between items-center">
-              <p className="text-[#D0D0D0] font-poppins font-normal text-sm sm:text-base">
+              <p className="text-[#D0D0D0] font-poppins ]font-normal text-sm sm:text-base">
                 Kasadara
               </p>
-              <button className="fees-button bg-[#0F8C41] text-xs sm:text-lg sm:font-semibold font-poppins">
+              <button className="fees-button bg-[#0F8C41] text-xs sm:text-lg sm:font-medium ">
                 ₹ 49,500
               </button>
             </div>
           </div>
           {/* paragraph-content */}
           <div className="flex ml-0 pl-0 py-2  ">
-            <p className="text-[#D0D0D0] text-left font-poppins font-normal text-xs sm:text-base sm:text-left">
+            <p className="text-[#D0D0D0] text-left font-poppins font-normal text-xs sm:text-base sm:text-left whitespace-pre-line">
               We believe in making quality education accessible without
               burdening your finances. Our UX bootcamp stands out for its
               affordability, and we provide flexible payment plans to
-              accommodate a range of budgets
+              accommodate a range of budgets.
             </p>
           </div>
           {/* write to us section for large screens */}
           <div className="sm:w-[full] justify-center sm:justify-start hidden sm:flex ">
-            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 gap-3 rounded-md">
+            <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 gap-8 rounded-md">
               <GraduateHatSvg></GraduateHatSvg>
-              <p className="text-[#D0D0D0] font-poppins text-center font-normal text-xs sm:text-base">
+              <p className="text-[#D0D0D0] font-poppins text-left font-normal text-xs sm:text-base w-fit">
                 Colleges students can avail scholarships
               </p>
-              <div className="flex gap-1 items-center">
-                <button className="pink-button">
+              <div className="flex gap-1 items-center  ">
+                <button className="pink-button whitespace-nowrap pink-button:hover">
                   <WriteToUsSvg></WriteToUsSvg>
                   Write to us
                 </button>
@@ -84,7 +84,7 @@ function CourseFee() {
               </p>
               <div className="flex gap-2 items-center">
                 <WriteToUsSvg></WriteToUsSvg>
-                <button className="pink-button">Write to us</button>
+                <button className="pink-button whitespace-nowrap">Write to us</button>
               </div>
             </div>
           </div>
