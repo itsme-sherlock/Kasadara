@@ -94,7 +94,7 @@ const Faq = () => {
           <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
             FAQ
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-10">
             <div>
               {faqContents.map((item,index)=>(
                 <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>

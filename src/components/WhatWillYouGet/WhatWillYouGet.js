@@ -1,14 +1,15 @@
 import React from "react";
 import "./WhatWillYouGet.css";
 import { ReactComponent as PassionateYouSvg } from "../../Assets/Section 2/Passionate you.svg";
-import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Strong and unmatched foundation in UX.svg";
+import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Stage 1.svg";
 import { ReactComponent as ArrowWeekJourney } from "../../Assets/Section 2/The 16 week journey.svg";
 import { ReactComponent as ArrowWeekJourneyMobile } from "../../Assets/Section 2/16 week journey mobile.svg";
-import { ReactComponent as FromBeginner } from "../../Assets/Section 2/From beginner to certified.svg";
-import { ReactComponent as GainABuisnessInsight } from "../../Assets/Section 2/Gain a Business insights for effective UX .svg";
-import { ReactComponent as GoldenTicket } from "../../Assets/Section 2/Golden ticket to the designers community.svg";
-import { ReactComponent as Portfolios } from "../../Assets/Section 2/Portfolios and case studies.svg";
-import { ReactComponent as FinalShowDown } from "../../Assets/Section 2/Prepare you for the final showdown.svg";
+import { ReactComponent as FromBeginner } from "../../Assets/Section 2/Stage 5.svg";
+import { ReactComponent as GainABuisnessInsight } from "../../Assets/Section 2/Stage 2.svg";
+import { ReactComponent as ReadyToFace } from "../../Assets/Section 2/Stage 3.svg";
+import { ReactComponent as GoldenTicket } from "../../Assets/Section 2/Stage 7.svg";
+import { ReactComponent as Portfolios } from "../../Assets/Section 2/Stage 4.svg";
+import { ReactComponent as FinalShowDown } from "../../Assets/Section 2/Stage 6.svg";
 import { ReactComponent as BigArrow } from "../../Assets/Section 2/Big Arrow vector.svg";
 import { ReactComponent as ArrowBetweenCards } from "../../Assets/Section 2/ArrowBetweenCards.svg";
 import { Element } from "react-scroll";
@@ -54,7 +55,7 @@ function WhatWillYouGet(props) {
       heading: "Ready to face the real world design challenges ",
       content:
         "We provide extensive training with numerous real-world activities to practice and apply the learnings  ",
-      svg: <StrongSvg />,
+      svg: <ReadyToFace />,
       style: "", // Add Tailwind CSS classes for styling
     },
 
@@ -94,7 +95,7 @@ function WhatWillYouGet(props) {
   ];
 
   return (
-    <Element name="course-journey" className="border-2 border-black h-fit">
+    <Element name="course-journey" className="h-fit">
       <div className="flex flex-col mx-4 my-8 sm:py-24 sm:mx-20 ">
         {/* main heading and subheading */}
         <div className="">

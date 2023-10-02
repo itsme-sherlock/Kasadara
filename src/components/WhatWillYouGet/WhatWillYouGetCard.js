@@ -6,7 +6,7 @@ function Card({number,heading ,content,svg}){
         
         <div className="p-4 w-52">
             {/* Card number */}
-            <div className="bg-[#B01873] sm:bg-transparent w-6 h-6 flex justify-center rounded-full text-white">{number}</div>
+            <div className="bg-[#B01873] hidden sm:bg-transparent w-6 h-6  justify-center rounded-full text-white">{number}</div>
             {/* SVG */}
             {svg}
             {/* Heading of the card */}

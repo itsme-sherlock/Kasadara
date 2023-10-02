@@ -264,7 +264,7 @@ function EighteenWeek({ windowWidth }) {
             </span>
           </h4>
           {/* Paragraph Content */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between">
             
           <p className="custom-text-color text-sm lg:whitespace-nowrap text-left">
             The entire course will be held in weekend to make it feasible for

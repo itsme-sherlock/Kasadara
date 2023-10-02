@@ -8,7 +8,7 @@ const Card = ({ title, fee, description, gst }) => {
       <h2 className="text-black pb-6 text-base sm:text-2xl font-poppins font-semibold text-start">
         {title}
       </h2>
-      <div className="flex flex-col sm:items-start items-center">
+      <div className="flex flex-col sm:items-start items-center ">
         {/* fees */}
         <p className="theme-pink font-bold text-2xl sm:text-4xl ">
           {fee}

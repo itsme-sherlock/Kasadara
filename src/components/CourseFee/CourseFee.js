@@ -11,7 +11,7 @@ function CourseFee() {
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
-          "var(--K-grad-2, linear-gradient(219deg, #7B115D -9.77%, #591B76 83.29%))",
+          "var(--grad--dark-K, linear-gradient(295deg, #4C0D3A -8.97%, #3D0C55 94.6%))",
       }}
     >
       <div className="sm:pt-20 sm:pl-16 flex flex-col justify-center lg:flex-row ">
