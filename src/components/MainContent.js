@@ -5,65 +5,72 @@ import { ReactComponent as ChatSvg } from "../Assets/Section 2/All we need from 
 import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying commitment.svg";
 import { ReactComponent as LustForDesign } from "../Assets/Section 2/Lust for design.svg";
 import { ReactComponent as HungerForLearning } from "../Assets/Section 2/Hunger for learning.svg";
+import { ReactComponent as Grid } from "../Assets/Hero section/GRID.svg";
 
 function MainContent(props) {
   console.log(props.windowWidth);
   console.log(props.sectionHeight);
+  console.log(props.navbarHeight);
+  // Calculate the height for clipping (half of the content)
+  const clipHeight = "40%"; // Adjust as needed
 
   return (
     <section
-      className="  w-full  text-center border-2 "
+      className="  w-full  text-center "
       style={{
-        height: `${props.sectionHeight}px`,
+        minHeight: `${props.sectionHeight}px`,
         background:
           "var(--grad--dark-K, linear-gradient(295deg, #4C0D3A -8.97%, #3D0C55 94.6%))",
+        marginTop: `${props.navbarHeight}`,
       }}
     >
-      <div className="flex flex-col w-full h-full justify-center  ">
-        {/* mainHeading */}
-        <div className="flex flex-col justify-center">
-          <div className="text-white font-segoeui font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
-            {/* Conditionally render text based on screen size */}
+      <div className="flex flex-col w-full h-full justify-center py-10 sm:py-24 ">
+        <Grid
+          className="opacity-10 absolute "
+          style={{ clipPath: `inset(0 0 ${clipHeight} 0)` }}
+        />
 
+        {/* mainHeading */}
+        <div className="flex flex-col justify-center ">
+          <div className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
+            {/* Conditionally render text based on screen size */}
             {props.windowWidth < 640
               ? "Learn UX UI Design"
-              : "Master UX UI Design"}
+              : "Learn UX UI Design"}
           </div>
-
-          <div className="text-[#E5CEE4] font-normal sm:font-bold text-xs sm:text-2xl font-poppins">
+          <div className="text-white font-light sm:font-light text-xs sm:text-xl font-poppins">
             from the industry experts just in 18 weeks, from beginner to
             certified
           </div>
         </div>
         {/*all we need from you section*/}
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex justify-center mt-16">
+        <div className="flex flex-col items-center justify-center py-12 sm:py-10">
+          <div className="flex justify-center w-full sm:mr-80">
             <ChatSvg className="w-[70%] sm:w-[100%]"></ChatSvg>
           </div>
-
           <div className="flex flex-wrap justify-center  bg-white rounded-lg bg-opacity-20 sm:bg-transparent w-fit">
-            <div className="flex flex-col sm:flex-row justify-center sm:border-y border-white border-opacity-10 py-8 w-fit ">
+            <div className="flex flex-col sm:flex-row justify-center sm:border-y border-white border-opacity-20 py-4 w-fit ">
               {/*icon*/}
-              <div className="flex items-center sm:border-r border-white px-6 py-2 gap-3 ">
+              <div className="flex items-center sm:border-r border-opacity-20 border-white px-4 py-2 gap-3 ">
                 <UnderlyingSvg></UnderlyingSvg>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins font-semibold opacity-70">
-                  Underlying Commitment
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-medium ">
+                  Undying Commitment
                 </h4>
               </div>
               {/*icon*/}
-              <div className="flex items-center px-6 py-2 gap-3">
+              <div className="flex items-center px-4 py-2 gap-3">
                 <LustForDesign></LustForDesign>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins sm:font-semibold opacity-70">
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-mediumopacity-70">
                   Lust for Design
                 </h4>
               </div>
               {/*icon*/}
-              <div className="flex items-center sm:border-l border-white pl-6 py-2 gap-3">
+              <div className="flex items-center sm:border-l border-opacity-20 border-white pl-6 py-2 gap-3">
                 <HungerForLearning></HungerForLearning>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins font-semibold opacity-70 ">
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-medium ">
                   Hunger for Learning
                 </h4>
               </div>
@@ -71,8 +78,8 @@ function MainContent(props) {
           </div>
         </div>
         {/*think you are the one section*/}
-        <div className="flex flex-col sm:flex-row justify-center my-14 items-center gap-6 ">
-          <h4 className="font-indie-flower text-white text-opacity-50">
+        <div className="flex flex-col sm:flex-row justify-center sm:mt-14 items-center gap-6 ">
+          <h4 className="font-indie-flower text-white sm:text-2xl">
             Think you are the one
           </h4>
           <svg
@@ -89,7 +96,7 @@ function MainContent(props) {
             />
           </svg>
           <button className="font-poppins text-white px-4 py-2 bg-[#0F8C41] hover:bg-[#00692A;] transition-all rounded-md text-base font-semibold">
-            Join our BootCamp
+            JOIN OUR BOOTCAMP
           </button>
         </div>
       </div>

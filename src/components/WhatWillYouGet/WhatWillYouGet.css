@@ -41,6 +41,13 @@
   gap: 10px;
   align-self: stretch;
 }
+/* Hover state styles */
+.pink-button:hover {
+  /* Add your hover styles here */
+  background: linear-gradient(219deg, #591b76 -9.77%, #7b115d 83.29%);
+  /* Example: change background color */
+  /* Add any other hover styles you want */
+}
 .display-card {
   /* display: flex; */
   /* height: 336px; */

@@ -4,7 +4,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import MainContent from './components/MainContent';
 import WhatWillYouGet from './components/WhatWillYouGet/WhatWillYouGet';
-import WhyUS from './components/whyus/WhyUs';
+// import WhyUS from './components/whyus/WhyUs';
 import UpcomingBatches from './components/upcomingBatches/UpcomingBatches';
 import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
@@ -13,6 +13,7 @@ import { useState, useEffect,useRef } from "react";
 function App() {
   // conditional rendering with different displays
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [navbarHeight, setNavbarHeight] = useState(0);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -45,16 +46,18 @@ function App() {
     console.log("sectionHeight " + sectionHeight)
 
     setSectionHeight(sectionHeight);
+    setNavbarHeight(navbarHeight); 
   }, []);
   return (
     <div>
       <NavBar navbarRef={navbarRef}  />
       <MainContent 
       windowWidth={windowWidth}
-      sectionHeight={sectionHeight}/>
+      sectionHeight={sectionHeight}
+      navbarHeight={navbarHeight}/>
       <WhatWillYouGet sectionHeight={sectionHeight}/>
-      <WhyUS    />
-      <UpcomingBatches/>
+      {/* <WhyUS    /> */}
+      <UpcomingBatches/>    
       <CourseFee/>
       <EighteenWeek windowWidth={windowWidth}/>
       <FaqSection></FaqSection>

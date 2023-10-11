@@ -2,6 +2,8 @@ import React from "react";
 import { useRef } from "react";
 import FaqVideoFrame from "./FaqVideoFrame";
 import FaqAccordian from "./FaqAccordian";
+import { ReactComponent as LeftArrow } from "../../Assets/Faq/Nav arrow left.svg";
+import { ReactComponent as RightArrow } from "../../Assets/Faq/Navigation arrow right.svg";
 
 const Faq = () => {
   const scroller = useRef(null);
@@ -45,7 +47,7 @@ const Faq = () => {
   ]
   return (
     // parent Container
-    <div>
+    <div className="sm:py-10">
       {/* text content */}
       <div>
         <h1 className="font-medium text-2xl font-poppins py-4  text-center">
@@ -74,13 +76,13 @@ const Faq = () => {
           <div className="absolute top-0 left-0">
             {/* left button */}
             <button className="" onClick={scrollLeft}>
-              &lt;
+              <LeftArrow></LeftArrow>
             </button>
           </div>
           {/* right buttons */}
           <div className="absolute top-0 right-0">
             <button className="" onClick={scrollRight}>
-              &gt;
+              <RightArrow></RightArrow>
             </button>
           </div>
         </div>
@@ -92,7 +94,7 @@ const Faq = () => {
           <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
             FAQ
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-10">
             <div>
               {faqContents.map((item,index)=>(
                 <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>

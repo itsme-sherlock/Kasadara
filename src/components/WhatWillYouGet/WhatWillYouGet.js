@@ -1,21 +1,22 @@
 import React from "react";
 import "./WhatWillYouGet.css";
 import { ReactComponent as PassionateYouSvg } from "../../Assets/Section 2/Passionate you.svg";
-import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Strong and unmatched foundation in UX.svg";
+import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Stage 1.svg";
 import { ReactComponent as ArrowWeekJourney } from "../../Assets/Section 2/The 16 week journey.svg";
 import { ReactComponent as ArrowWeekJourneyMobile } from "../../Assets/Section 2/16 week journey mobile.svg";
-import { ReactComponent as FromBeginner } from "../../Assets/Section 2/From beginner to certified.svg";
-import { ReactComponent as GainABuisnessInsight } from "../../Assets/Section 2/Gain a Business insights for effective UX .svg";
-import { ReactComponent as GoldenTicket } from "../../Assets/Section 2/Golden ticket to the designers community.svg";
-import { ReactComponent as Portfolios } from "../../Assets/Section 2/Portfolios and case studies.svg";
-import { ReactComponent as FinalShowDown } from "../../Assets/Section 2/Prepare you for the final showdown.svg";
+import { ReactComponent as FromBeginner } from "../../Assets/Section 2/Stage 5.svg";
+import { ReactComponent as GainABuisnessInsight } from "../../Assets/Section 2/Stage 2.svg";
+import { ReactComponent as ReadyToFace } from "../../Assets/Section 2/Stage 3.svg";
+import { ReactComponent as GoldenTicket } from "../../Assets/Section 2/Stage 7.svg";
+import { ReactComponent as Portfolios } from "../../Assets/Section 2/Stage 4.svg";
+import { ReactComponent as FinalShowDown } from "../../Assets/Section 2/Stage 6.svg";
 import { ReactComponent as BigArrow } from "../../Assets/Section 2/Big Arrow vector.svg";
 import { ReactComponent as ArrowBetweenCards } from "../../Assets/Section 2/ArrowBetweenCards.svg";
 import { Element } from "react-scroll";
 import Card from "./WhatWillYouGetCard";
 
 function WhatWillYouGet(props) {
-  console.log('What will you get '+ props.sectionHeight)
+  console.log("What will you get " + props.sectionHeight);
   // An array of card data (you can replace this with your actual card data)
   // Define an array of card data with different styles and SVGs
   const cards = [
@@ -54,7 +55,7 @@ function WhatWillYouGet(props) {
       heading: "Ready to face the real world design challenges ",
       content:
         "We provide extensive training with numerous real-world activities to practice and apply the learnings  ",
-      svg: <StrongSvg />,
+      svg: <ReadyToFace />,
       style: "", // Add Tailwind CSS classes for styling
     },
 
@@ -94,36 +95,49 @@ function WhatWillYouGet(props) {
   ];
 
   return (
-    <Element name="course-journey"
-    style={{
-      height:`${props.sectionHeight}px`,
-    }}>
-      <section className="border-2 border-black mb-10 ">
-        <div className="flex flex-col mx-4 my-8 sm:mt-20 sm:mx-20 "
-        >
-          {/* main heading and subheading */}
-          <div className="">
-            <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">
-              What you will get in
-              <span className="text-[#B01873] font-poppins font-extrabold sm:text-4xl text-2xl">
-                {" "}
-                the 18 week
-              </span>
-            </h1>
+    <Element name="course-journey" className="h-fit">
+      <div className="flex flex-col mx-4 my-8 sm:py-10 sm:mx-20 ">
+        {/* main heading and subheading */}
+        <div className="">
+          <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">
+            What you will get in
+            <span className="text-[#B01873] font-poppins font-extrabold sm:text-4xl text-2xl">
+              {" "}
+              the 18 week
+            </span>
+          </h1>
+        </div>
+        {/* cards sction large screen */}
+        <div className="hidden xl:block xl:relativek">
+          <div className="flex">
+            {/* Generate cards for the first row */}
+            {cards.map(
+              (card, index) =>
+                index < 5 && (
+                  <div
+                    key={index}
+                    className={`p-4 ${card.style} ${index > 1 ? "px-10" : ""}`}
+                  >
+                    <Card
+                      number={card.number}
+                      heading={card.heading}
+                      content={card.content}
+                      svg={card.svg}
+                    />
+                  </div>
+                )
+            )}
           </div>
-          {/* cards sction large screen */}
-          <div className="hidden sm:relative lg:block">
-            <div className="flex">
-              {/* Generate cards for the first row */}
-              {cards.map(
-                (card, index) =>
-                  index < 5 && (
-                    <div
-                      key={index}
-                      className={`p-4 ${card.style} ${
-                        index > 1 ? "px-10" : ""
-                      }`}
-                    >
+          <div className="h-0 absolute top-24 left-24">
+            <BigArrow className="hidden lg:block lg:relative" />
+          </div>
+          <div className="flex overflow-x-auto gap-10 justify-center mt-20 ml-10">
+            {/* Generate cards for the second row */}
+            {cards.map(
+              (card, index) =>
+                index > 4 && (
+                  <div className="flex items-center">
+                    <div key={index} className={`p-4 ${card.style}`}>
                       <Card
                         number={card.number}
                         heading={card.heading}
@@ -131,62 +145,41 @@ function WhatWillYouGet(props) {
                         svg={card.svg}
                       />
                     </div>
-                  )
-              )}
-            </div>
-            <div className="h-0 absolute top-24 left-24">
-              <BigArrow className="hidden lg:block" />
-            </div>
-            <div className="flex overflow-x-auto gap-10 justify-center">
-              {/* Generate cards for the second row */}
-              {cards.map(
-                (card, index) =>
-                  index > 4 && (
-                    <div className="flex items-center">
-                      <div key={index} className={`p-4 ${card.style}`}>
-                        <Card
-                          number={card.number}
-                          heading={card.heading}
-                          content={card.content}
-                          svg={card.svg}
-                        />
-                      </div>
-                      <ArrowBetweenCards className={index === 8 ? 'hidden' : 'block'} />
-                    </div>
-                  )
-              )}
-            </div>
-          </div>
-          {/* cards section mobile view */}
-          <div className="my-8 lg:hidden  ">
-            <div className="flex items-end">
-              <PassionateYouSvg></PassionateYouSvg>
-              <ArrowWeekJourneyMobile></ArrowWeekJourneyMobile>
-            </div>
-            <div className="my-8 flex overflow-x-auto">
-              {/* Generate cards from 1 to 12 */}
-              {cards.map(
-                (card, index) =>
-                  index > 1 && (
-                    <div
-                      key={index}
-                      className={`p-4 ${card.style} ${
-                        index > 0 ? "gap-10" : ""
-                      }`}
-                    >
-                      <Card
-                        number={card.number}
-                        heading={card.heading}
-                        content={card.content}
-                        svg={card.svg}
-                      />
-                    </div>
-                  )
-              )}
-            </div>
+                    <ArrowBetweenCards
+                      className={index === 8 ? "hidden" : "block"}
+                    />
+                  </div>
+                )
+            )}
           </div>
         </div>
-      </section>
+        {/* cards Elements mobile view */}
+        <div className="my-8 block xl:hidden">
+          <div className="flex items-end">
+            <PassionateYouSvg></PassionateYouSvg>
+            <ArrowWeekJourneyMobile></ArrowWeekJourneyMobile>
+          </div>
+          <div className="my-8 flex overflow-x-auto">
+            {/* Generate cards from 1 to 12 */}
+            {cards.map(
+              (card, index) =>
+                index > 1 && (
+                  <div
+                    key={index}
+                    className={`p-4 ${card.style} ${index > 0 ? "gap-10" : ""}`}
+                  >
+                    <Card
+                      number={card.number}
+                      heading={card.heading}
+                      content={card.content}
+                      svg={card.svg}
+                    />
+                  </div>
+                )
+            )}
+          </div>
+        </div>
+      </div>
     </Element>
   );
 }
