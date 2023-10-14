@@ -10,12 +10,12 @@ function Card({number,heading ,content,svg}){
             {/* SVG */}
             {svg}
             {/* Heading of the card */}
-            <p className="text-sm font-poppins font-extrabold">
+            <p className="text-sm font-poppins font-extrabold py-6 text-gray-800">
                 {heading}
               
             </p>
             {/* content of the card */}
-            <p className="text-xs mt-2 font-poppins">
+            <p className="text-xs mt-2 font-poppins text-gray-700">
                 {content}
               
             </p>

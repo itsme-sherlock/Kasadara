@@ -249,7 +249,7 @@ function EighteenWeek({ windowWidth }) {
   };
   return (
     <section className="bg-[#F2F2F2]">
-      <div className="sm:px-16 sm:py-10">
+      <div className="sm:px-16 sm:py-10 flex flex-col justify-center items-center">
         {/* TextSection and right SVG image */}
         <div className="flex flex-col px-4 py-4">
           {/* Heaading */}
@@ -311,7 +311,7 @@ function EighteenWeek({ windowWidth }) {
           </div>
         </div>
         {/* Grid only for smaller/medium screens */}
-        <div className="flex flex-col items-center lg:hidden">
+        <div className="flex flex-col  sm:grid md:grid sm:grid-cols-2 md:grid-cols-3 lg:hidden">
           <MobileCard
             week={"Week 1 - 4"}
             orderedList={[

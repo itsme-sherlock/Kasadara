@@ -29,20 +29,24 @@ const Faq = () => {
   };
   const faqContents=[
     {
-      question: "Is it an online Programme?",
-      answer: "Yes, it is completely online...",
+      question: "What is Kasadara?",
+      answer: "Kasadara is a specialized institute focused on UX UI design. We offer a comprehensive course that caters to both beginners and intermediates, providing the skills and knowledge needed to excel in the field of User Experience and User Interface design.",
     },
     {
-      question: "How is this learning programme different from other bootcamps?",
-      answer: "This program is unique because...",
+      question: "Tell me about the course at Kasadara.",
+      answer: "Our signature course is designed to cover a wide range of topics in UX UI design. It's suitable for both beginners and intermediates, providing a solid foundation and advanced knowledge over 18 weeks.",
     },
     {
-      question: "What is the minimum qualification required for the course?",
-      answer: "To join this course, you need...",
+      question: "How long do your courses typically last?",
+      answer: "Our course spans 18 weeks, providing you with a thorough education in UX UI design. But if the students need some time to cope-up we can always extend. We are flexible with the course duration.",
     },
     {
-      question: "Is this a full-time program?",
-      answer: "No, this is not a full-time program...",
+      question: "Who are the instructors at Kasadara?",
+      answer: "Our course instructors are industry experts with a minimum of 7+ years of experience in UX UI design. They bring real-world insights and practical knowledge to the classroom.We also bring guest lectures and juries from leading tech companies, providing students with diverse perspectives on the topic",
+    },
+    {
+      question: "Do you offer placement support and networking opportunities?",
+      answer: "Yes, we provide job placement assistance and networking opportunities throughout your studies and after course completion. We understand the importance of building connections in the industry who can help you find opportunities in the UX UI design field",
     },
   ]
   return (
@@ -95,12 +99,7 @@ const Faq = () => {
             FAQ
           </h1>
           <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-10">
-            <div>
-              {faqContents.map((item,index)=>(
-                <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>
-              ))}
-            </div>
-            <div>
+            <div className="w-[90%]">
               {faqContents.map((item,index)=>(
                 <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>
               ))}

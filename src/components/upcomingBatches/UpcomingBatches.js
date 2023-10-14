@@ -23,7 +23,7 @@ function UpcomingBatches() {
   ];
   return (
     <Element name='Upcoming Batch'>
-      <div className=" bg-[#F2F2F2] py-5 sm:py-10">
+      <div className=" bg-[#F2F2F2] py-5 sm:pb-10 sm:pt-20">
         <div className=" my-6  text-center sm:text-left flex-col flex sm:items-start sm:pl-20  ">
           {/*Element heading*/} 
           <h1 className="text-black  font-poppins font-extrabold text-2xl sm:text-4xl ">

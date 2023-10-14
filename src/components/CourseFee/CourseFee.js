@@ -7,7 +7,7 @@ import { ReactComponent as WriteToUsSvg } from "../../Assets/CourseFees/border_c
 function CourseFee() {
   return (
     <section
-      className="text-center flex gap-10    "
+      className="text-center gap-10    "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
@@ -119,7 +119,7 @@ function CourseFee() {
         </div>
       </div>
       {/* screen size less than lg */}
-      <div className="lg:hidden flex justify-center  flex-col px-4 py-8">
+      <div className="lg:hidden  px-4 py-8">
         {/* section heading */}
         <div className="">
             <h1 className="text-[#D0D0D0] font-poppins font-medium text-2xl sm:text-5xl text-left">
@@ -133,7 +133,7 @@ function CourseFee() {
             </h4>
           </div>
           {/* price-rate in button */}
-          <div className="flex flex-col sm:gap-8 sm:flex-row py-4 border-y border-white border-opacity-20 gap-y-4">
+          <div className="flex flex-col sm:gap-8 py-4 border-y border-white border-opacity-20 gap-y-4">
             <div className="flex gap-4 justify-between items-center">
               <p className="text-[#D0D0D0] font-poppins font-normal text-sm sm:text-base ">
                 Other Bootcamp Fee

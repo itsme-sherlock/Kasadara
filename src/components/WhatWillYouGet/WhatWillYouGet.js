@@ -150,13 +150,13 @@ function WhatWillYouGet(props) {
         {/* cards Elements mobile view */}
         <div className="my-8 flex flex-col xl:hidden px-4 py-5 ">
           <div className="flex items-end">
-           <PassionateYouSvgMobile className="w-44 h-64"></PassionateYouSvgMobile>
+           <PassionateYouSvgMobile className="w-64 h-64"></PassionateYouSvgMobile>
           </div>
-          <div className="my-8 flex overflow-x-auto gap-9 min-h-full">
+          <div className="my-8 flex overflow-x-auto gap-9 h-96">
             {/* Generate cards from 1 to 12 */}
             {cards.map(
               (card, index) =>
-                index > 1 && (
+                index > 0 && (
                   <div
                     key={index}
                     className={`px-4 py-5 xl:p-4 ${card.style} ${index > 0 ? "gap-10" : ""}`}
