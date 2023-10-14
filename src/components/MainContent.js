@@ -6,6 +6,38 @@ import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying com
 import { ReactComponent as LustForDesign } from "../Assets/Section 2/Lust for design.svg";
 import { ReactComponent as HungerForLearning } from "../Assets/Section 2/Hunger for learning.svg";
 import { ReactComponent as Grid } from "../Assets/Hero section/GRID.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
+function TypingAnimation({text}) {
+
+  return (
+    <div>
+      {text.split("").map((char, index) => (
+        <TypingChar key={index} char={char} delay={index * 0.05} />
+      ))}
+    </div>
+  );
+}
+function TypingChar({ char, delay }) {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1 });
+  }, [controls]);
+
+  return (
+    <motion.span
+      style={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={controls}
+      transition={{ duration: 0.5, delay }}
+    >
+      {char}
+    </motion.span>
+  );
+}
+
 
 function MainContent(props) {
   console.log(props.windowWidth);
@@ -33,14 +65,10 @@ function MainContent(props) {
         {/* mainHeading */}
         <div className="flex flex-col justify-center ">
           <div className="text-white font-poppins font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
-            {/* Conditionally render text based on screen size */}
-            {props.windowWidth < 640
-              ? "Learn UX UI Design"
-              : "Learn UX UI Design"}
+          <TypingAnimation text = "Learn UX UI Design"/>
           </div>
           <div className="text-white font-normal sm:font-normal text-xs sm:text-xl font-poppins">
-            from the industry experts just in 18 weeks, from beginner to
-            certified
+            <TypingAnimation text = "From the industry experts just in 18 weeks, from beginner to certified"/>
           </div>
         </div>
         {/*all we need from you section*/}
