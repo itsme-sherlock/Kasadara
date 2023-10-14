@@ -1,10 +1,10 @@
 import React from "react";
 import "./WhatWillYouGet.css";
 import { ReactComponent as PassionateYouSvg } from "../../Assets/Section 2/Passionates you.svg";
-import { ReactComponent as PassionateYouSvgMobile } from "../../Assets/Section 2/passionate you mobile.svg";
+import { ReactComponent as PassionateYouSvgMobile } from "../../Assets/Section 2/PassionateM.svg";
 import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Stage 1.svg";
-import { ReactComponent as ArrowWeekJourney } from "../../Assets/Section 2/The 16 week journey.svg";
-import { ReactComponent as ArrowWeekJourneyMobile } from "../../Assets/Section 2/16 week journey mobile.svg";
+// import { ReactComponent as ArrowWeekJourney } from "../../Assets/Section 2/The 16 week journey.svg";
+// import { ReactComponent as ArrowWeekJourneyMobile } from "../../Assets/Section 2/16 week journey mobile.svg";
 import { ReactComponent as FromBeginner } from "../../Assets/Section 2/Stage 5.svg";
 import { ReactComponent as GainABuisnessInsight } from "../../Assets/Section 2/Stage 2.svg";
 import { ReactComponent as ReadyToFace } from "../../Assets/Section 2/Stage 3.svg";
@@ -12,7 +12,7 @@ import { ReactComponent as GoldenTicket } from "../../Assets/Section 2/Stage 7.s
 import { ReactComponent as Portfolios } from "../../Assets/Section 2/Stage 4.svg";
 import { ReactComponent as FinalShowDown } from "../../Assets/Section 2/Stage 6.svg";
 import { ReactComponent as BigArrow } from "../../Assets/Section 2/Big Arrow vector.svg";
-import { ReactComponent as ArrowBetweenCards } from "../../Assets/Section 2/ArrowBetweenCards.svg";
+// import { ReactComponent as ArrowBetweenCards } from "../../Assets/Section 2/ArrowBetweenCards.svg";
 import { Element } from "react-scroll";
 import Card from "./WhatWillYouGetCard";
 

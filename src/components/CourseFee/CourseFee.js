@@ -7,7 +7,7 @@ import { ReactComponent as WriteToUsSvg } from "../../Assets/CourseFees/border_c
 function CourseFee() {
   return (
     <section
-      className="text-center sm:flex gap-10 "
+      className="text-center flex gap-10    "
       style={{
         // background: 'linear-gradient(219deg, rgba(123, 17, 93, 0.00) -9.63%, #591B76 82.78%)',
         background:
@@ -15,7 +15,7 @@ function CourseFee() {
       }}
     >
       {/* for screen size larger than lg */}
-      <div className=" hidden sm:py-10 sm:pl-16  flex-col justify-center items-center lg:flex-row lg:gap-10 xl:gap-32 ">
+      <div className=" hidden lg:flex lg:py-8 lg:px-4 justify-center items-center  lg:gap-10 xl:gap-32 ">
         {/* left section */}
         <div className="flex-1 px-4 py-8 text-left ">
           {/* section heading */}
@@ -75,7 +75,7 @@ function CourseFee() {
           </div>
         </div>
         {/* right section */}
-        <div className="sm:flex-1  flex flex-col-reverse sm:justify-around">
+        <div className="flex-1  flex flex-col-reverse sm:justify-around ">
           {/* write to us section only for small screen */}
           <div className="flex sm:w-[full] justify-center sm:justify-start sm:hidden">
             <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 sm:p-4 px-5 py-5 rounded-md bg-black bg-opacity-30 ">
@@ -119,16 +119,16 @@ function CourseFee() {
         </div>
       </div>
       {/* screen size less than lg */}
-      <div>
+      <div className="lg:hidden flex justify-center  flex-col px-4 py-8">
         {/* section heading */}
-        <div className="ml-0">
-            <h1 className="text-[#D0D0D0] font-poppins font-medium text-2xl sm:text-5xl ">
+        <div className="">
+            <h1 className="text-[#D0D0D0] font-poppins font-medium text-2xl sm:text-5xl text-left">
               Course Fee
             </h1>
           </div>
           {/* sub heading */}
           <div>
-            <h4 className="text-[#C49485] font-poppins font-normal text-sm sm:text-2xl my-3">
+            <h4 className="text-[#C49485] font-poppins font-normal text-sm sm:text-2xl my-3 text-left">
               Affordable education
             </h4>
           </div>
@@ -161,7 +161,7 @@ function CourseFee() {
             </p>
           </div>
           {/* write to us section*/}
-          <div className="sm:w-[full] justify-center sm:justify-start hidden sm:flex ">
+          <div className="sm:w-[full] justify-center sm:justify-start sm:flex ">
             <div className="flex flex-col w-fit sm:flex-row items-center justify-between my-4 p-4 bg-black bg-opacity-30 gap-8 rounded-md">
               <GraduateHatSvg></GraduateHatSvg>
               <p className="text-[#D0D0D0] font-poppins text-left font-normal text-xs sm:text-base w-fit">
@@ -172,6 +172,29 @@ function CourseFee() {
                   <WriteToUsSvg></WriteToUsSvg>
                   Write to us
                 </button>
+              </div>
+            </div>
+          </div>
+          <div className="overflow-x-auto flex">
+            <div className="px-4 flex  gap-6 ">
+              <div className="whitespace-pre-line">
+                <Card
+                  title={`Two Month
+                    Payment Plan`}
+                  fee="₹ 27,500"
+                  description="Total:  ₹ 55,000"
+                  gst="Inclusive of GST"
+                />
+              </div>
+              <div className="whitespace-pre-line">
+                <Card
+                  title={`Single Month
+                  Payment Plan`}
+                  fee="₹ 49,500"
+                  description="You will save ₹ 6,000."
+                  gst="Inclusive of GST"
+                />
+                {/* Add more cards with different content */}
               </div>
             </div>
           </div>
