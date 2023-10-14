@@ -47,7 +47,7 @@ const Faq = () => {
   ]
   return (
     // parent Container
-    <div>
+    <div className="sm:py-10">
       {/* text content */}
       <div>
         <h1 className="font-medium text-2xl font-poppins py-4  text-center">

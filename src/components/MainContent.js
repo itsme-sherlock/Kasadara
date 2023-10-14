@@ -6,38 +6,6 @@ import { ReactComponent as UnderlyingSvg } from "../Assets/Section 2/undying com
 import { ReactComponent as LustForDesign } from "../Assets/Section 2/Lust for design.svg";
 import { ReactComponent as HungerForLearning } from "../Assets/Section 2/Hunger for learning.svg";
 import { ReactComponent as Grid } from "../Assets/Hero section/GRID.svg";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-
-function TypingAnimation({text}) {
-
-  return (
-    <div>
-      {text.split("").map((char, index) => (
-        <TypingChar key={index} char={char} delay={index * 0.05} />
-      ))}
-    </div>
-  );
-}
-function TypingChar({ char, delay }) {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({ opacity: 1 });
-  }, [controls]);
-
-  return (
-    <motion.span
-      style={{ opacity: 0 }}
-      initial={{ opacity: 0 }}
-      animate={controls}
-      transition={{ duration: 0.5, delay }}
-    >
-      {char}
-    </motion.span>
-  );
-}
-
 
 function MainContent(props) {
   console.log(props.windowWidth);
@@ -58,17 +26,23 @@ function MainContent(props) {
     >
       <div className="flex flex-col w-full h-full justify-center py-10 sm:py-24 ">
         <Grid
-          className="opacity-10 absolute "
+          className="opacity-5 absolute "
           style={{ clipPath: `inset(0 0 ${clipHeight} 0)` }}
-        />
+        /> 
+
+        
 
         {/* mainHeading */}
         <div className="flex flex-col justify-center ">
-          <div className="text-white font-poppins font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
-          <TypingAnimation text = "Learn UX UI Design"/>
+          <div className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2">
+            {/* Conditionally render text based on screen size */}
+            {props.windowWidth < 640
+              ? "Learn UX UI Design"
+              : "Learn UX UI Design"}
           </div>
-          <div className="text-white font-normal sm:font-normal text-xs sm:text-xl font-poppins">
-            <TypingAnimation text = "From the industry experts just in 18 weeks, from beginner to certified"/>
+          <div className="text-white font-light sm:font-light text-xs sm:text-xl font-poppins">
+            from the industry experts just in 18 weeks, from beginner to
+            certified
           </div>
         </div>
         {/*all we need from you section*/}
@@ -77,20 +51,20 @@ function MainContent(props) {
             <ChatSvg className="w-[70%] sm:w-[100%]"></ChatSvg>
           </div>
           <div className="flex flex-wrap justify-center  bg-white rounded-lg bg-opacity-20 sm:bg-transparent w-fit">
-            <div className="flex flex-col sm:flex-row justify-center sm:border-y border-white border-opacity-20 py-6 w-fit ">
+            <div className="flex flex-col sm:flex-row justify-center sm:border-y border-white border-opacity-20 py-4 w-fit ">
               {/*icon*/}
-              <div className="flex items-center sm:border-r border-opacity-20 border-white px-6 py-2 gap-3 ">
+              <div className="flex items-center sm:border-r border-opacity-20 border-white px-4 py-2 gap-3 ">
                 <UnderlyingSvg></UnderlyingSvg>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins sm:font-medium ">
-                  Underlying Commitment
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-medium ">
+                  Undying Commitment
                 </h4>
               </div>
               {/*icon*/}
-              <div className="flex items-center px-6 py-2 gap-3">
+              <div className="flex items-center px-4 py-2 gap-3">
                 <LustForDesign></LustForDesign>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins sm:font-mediumopacity-70">
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-mediumopacity-70">
                   Lust for Design
                 </h4>
               </div>
@@ -98,7 +72,7 @@ function MainContent(props) {
               <div className="flex items-center sm:border-l border-opacity-20 border-white pl-6 py-2 gap-3">
                 <HungerForLearning></HungerForLearning>
                 {/*TextContent*/}
-                <h4 className="text-white text-xs sm:text-lg font-poppins sm:font-medium ">
+                <h4 className="text-white text-xs sm:text-base font-poppins sm:font-medium ">
                   Hunger for Learning
                 </h4>
               </div>
@@ -107,7 +81,7 @@ function MainContent(props) {
         </div>
         {/*think you are the one section*/}
         <div className="flex flex-col sm:flex-row justify-center sm:mt-14 items-center gap-6 ">
-          <h4 className="font-indie-flower text-white sm:text-2xl text-opacity-50">
+          <h4 className="font-indie-flower text-white sm:text-2xl">
             Think you are the one
           </h4>
           <svg

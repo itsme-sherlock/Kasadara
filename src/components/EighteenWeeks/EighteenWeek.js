@@ -249,7 +249,7 @@ function EighteenWeek({ windowWidth }) {
   };
   return (
     <section className="bg-[#F2F2F2]">
-      <div className="sm:px-16 sm:py-20">
+      <div className="sm:px-16 sm:py-10">
         {/* TextSection and right SVG image */}
         <div className="flex flex-col px-4 py-4">
           {/* Heaading */}
@@ -266,7 +266,7 @@ function EighteenWeek({ windowWidth }) {
           {/* Paragraph Content */}
           <div className="flex items-start justify-between">
             
-          <p className="custom-text-color text-sm lg:whitespace-nowrap text-left">
+          <p className="custom-text-color text-base lg:whitespace-nowrap text-left">
             The entire course will be held in weekend to make it feasible for
             working professionals and college students to attend.
             {windowWidth < 640 ? (
