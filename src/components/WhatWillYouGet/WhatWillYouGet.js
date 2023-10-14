@@ -1,6 +1,7 @@
 import React from "react";
 import "./WhatWillYouGet.css";
-import { ReactComponent as PassionateYouSvg } from "../../Assets/Section 2/Passionate you.svg";
+import { ReactComponent as PassionateYouSvg } from "../../Assets/Section 2/Passionates you.svg";
+import { ReactComponent as PassionateYouSvgMobile } from "../../Assets/Section 2/passionate you mobile.svg";
 import { ReactComponent as StrongSvg } from "../../Assets/Section 2/Stage 1.svg";
 import { ReactComponent as ArrowWeekJourney } from "../../Assets/Section 2/The 16 week journey.svg";
 import { ReactComponent as ArrowWeekJourneyMobile } from "../../Assets/Section 2/16 week journey mobile.svg";
@@ -25,13 +26,6 @@ function WhatWillYouGet(props) {
       heading: "",
       content: "",
       svg: <PassionateYouSvg />,
-      style: "", // Add Tailwind CSS classes for styling
-    },
-    {
-      number: 0,
-      heading: "",
-      content: "",
-      svg: <ArrowWeekJourney />,
       style: "", // Add Tailwind CSS classes for styling
     },
     {
@@ -96,9 +90,9 @@ function WhatWillYouGet(props) {
 
   return (
     <Element name="course-journey" className="h-fit">
-      <div className="flex flex-col mx-4 my-8 sm:py-10 sm:mx-20 ">
+      <div className="flex flex-col mx-4 my-8 sm:py-10 sm:mx-20 xl:items-center xl:justify-center w-1/ ">
         {/* main heading and subheading */}
-        <div className="">
+        <div className="w-full">
           <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">
             What you will get in
             <span className="text-[#B01873] font-poppins font-extrabold sm:text-4xl text-2xl">
@@ -108,15 +102,15 @@ function WhatWillYouGet(props) {
           </h1>
         </div>
         {/* cards sction large screen */}
-        <div className="hidden xl:block xl:relativek">
-          <div className="flex">
+        <div className="hidden xl:block xl:relative mt-28">
+          <div className="flex justify-between gap-10">
             {/* Generate cards for the first row */}
             {cards.map(
               (card, index) =>
-                index < 5 && (
+                index < 4 && (
                   <div
                     key={index}
-                    className={`p-4 ${card.style} ${index > 1 ? "px-10" : ""}`}
+                    className={` ${card.style}`}
                   >
                     <Card
                       number={card.number}
@@ -129,15 +123,15 @@ function WhatWillYouGet(props) {
             )}
           </div>
           <div className="h-0 absolute top-24 left-24">
-            <BigArrow className="hidden lg:block lg:relative" />
+            <BigArrow className="hidden"/>
           </div>
-          <div className="flex overflow-x-auto gap-10 justify-center mt-20 ml-10">
+          <div className="flex overflow-x-auto gap-10 justify-center">
             {/* Generate cards for the second row */}
             {cards.map(
               (card, index) =>
-                index > 4 && (
+                index > 3 && (
                   <div className="flex items-center">
-                    <div key={index} className={`p-4 ${card.style}`}>
+                    <div key={index} className={`gap-12${card.style}`}>
                       <Card
                         number={card.number}
                         heading={card.heading}
@@ -145,28 +139,27 @@ function WhatWillYouGet(props) {
                         svg={card.svg}
                       />
                     </div>
-                    <ArrowBetweenCards
+                    {/* <ArrowBetweenCards
                       className={index === 8 ? "hidden" : "block"}
-                    />
+                    /> */}
                   </div>
                 )
             )}
           </div>
         </div>
         {/* cards Elements mobile view */}
-        <div className="my-8 block xl:hidden">
+        <div className="my-8 flex flex-col xl:hidden px-4 py-5 ">
           <div className="flex items-end">
-            <PassionateYouSvg></PassionateYouSvg>
-            <ArrowWeekJourneyMobile></ArrowWeekJourneyMobile>
+           <PassionateYouSvgMobile className="w-44 h-64"></PassionateYouSvgMobile>
           </div>
-          <div className="my-8 flex overflow-x-auto">
+          <div className="my-8 flex overflow-x-auto gap-9 min-h-full">
             {/* Generate cards from 1 to 12 */}
             {cards.map(
               (card, index) =>
                 index > 1 && (
                   <div
                     key={index}
-                    className={`p-4 ${card.style} ${index > 0 ? "gap-10" : ""}`}
+                    className={`px-4 py-5 xl:p-4 ${card.style} ${index > 0 ? "gap-10" : ""}`}
                   >
                     <Card
                       number={card.number}

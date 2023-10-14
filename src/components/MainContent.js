@@ -26,9 +26,11 @@ function MainContent(props) {
     >
       <div className="flex flex-col w-full h-full justify-center py-10 sm:py-24 ">
         <Grid
-          className="opacity-10 absolute "
+          className="opacity-5 absolute "
           style={{ clipPath: `inset(0 0 ${clipHeight} 0)` }}
-        />
+        /> 
+
+        
 
         {/* mainHeading */}
         <div className="flex flex-col justify-center ">

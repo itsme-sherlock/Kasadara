@@ -28,11 +28,10 @@ const Card = ({ title, fee, description, gst }) => {
         {/* Inclusive of GST */}
         <p className="text-black text-sm pb-4">{gst}</p>
       </div>
-      {/* join our bootcamp button */}
-      <div className="sm:mt-4">
+       {/* join our bootcamp button */}
+       <div className="sm:mt-4">
         <button
-          className="my-4 pink-button
-        h-[34px] sm:h-  [50px] w-[164px] sm:w-[170px] font-semibold text-xs sm:text-sm hover:bg-[#B01873] whitespace-nowrap"
+          className="my-4 pink-button h-[34px] sm:h-[50px] font-semibold text-xs sm:text-sm hover:bg-[#B01873] whitespace-nowrap"
         >
           JOIN OUR BOOTCAMP!
         </button>
@@ -40,5 +39,4 @@ const Card = ({ title, fee, description, gst }) => {
     </div>
   );
 };
-
 export default Card;
