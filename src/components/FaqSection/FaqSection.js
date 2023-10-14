@@ -46,7 +46,19 @@ const Faq = () => {
     },
     {
       question: "Do you offer placement support and networking opportunities?",
-      answer: "Yes, we provide job placement assistance and networking opportunities throughout your studies and after course completion. We understand the importance of building connections in the industry who can help you find opportunities in the UX UI design field",
+      answer: "Upon successfully completing our course, you will be awarded an industry-recognized certificate that demonstrates your proficiency in UX UI design, and a portfolio to showcase your skills to recruiters, making you the desirable candidate.",
+    },
+    {
+      question: "Can I pay for the course in installments?",
+      answer: "We offer a flexible payment option that allows you to pay for the course in two-month installments, making it easier for you to manage your finances",
+    },
+    {
+      question: "Can I visit Kasadara's campus before enrolling?",
+      answer: "Currently, our courses are offered online, and there's no need to visit a physical campus. You can access our course materials and resources from anywhere with an internet connection.",
+    }, 
+    {
+      question: "How can I enroll in the Kasadara course?",
+      answer: "Enrolling in our course is easy. Simply visit our website, choose the course, and follow the enrollment instructions provided. If you have any questions during the process, feel free to reach out to our admissions team for assistance.",
     },
   ]
   return (

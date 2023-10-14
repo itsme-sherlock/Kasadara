@@ -249,13 +249,16 @@ function EighteenWeek({ windowWidth }) {
   };
   return (
     <section className="bg-[#F2F2F2]">
-      <div className="sm:px-16 sm:py-10 flex flex-col justify-center items-center">
+      <div className="sm:px-16 sm:py-10 flex flex-col justify-center ">
         {/* TextSection and right SVG image */}
         <div className="flex flex-col px-4 py-4">
-          {/* Heaading */}
-          <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
-            The 18 Week
-          </h1>
+          {/* Heaading and svg */}
+          <div className="flex justify-between">
+            <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
+              The 18 Week
+            </h1>
+            <TirePushingTop className="hidden sm:block"/>
+          </div>
           {/* subHeading */}
           <h4 className="text-[#B01873] py-4 font-poppins font-semibold text-base sm:text-2xl">
             Intense bootcamp{" "}
@@ -280,7 +283,7 @@ function EighteenWeek({ windowWidth }) {
             We are not rigid with the 18 week plan we are flexible enough to
             extend the duration depends on the students progress{" "}
           </p>
-          <TirePushingTop className="hidden sm:block"/>
+         
           </div>
         </div>
 
