@@ -23,8 +23,8 @@ function UpcomingBatches() {
   ];
   return (
     <Element name='Upcoming Batch'>
-      <div className=" bg-[#F2F2F2] py-5 sm:pb-10 sm:pt-20">
-        <div className=" my-6  text-center sm:text-left flex-col flex sm:items-start sm:pl-20  ">
+      <div className=" bg-[#F2F2F2] px-[2%] py-12 sm:px-[15%] sm:py-24">
+        <div className=" text-center sm:text-left flex-col flex sm:items-start   ">
           {/*Element heading*/} 
           <h1 className="text-black  font-poppins font-extrabold text-2xl sm:text-4xl ">
             Upcoming Batches
@@ -42,7 +42,7 @@ function UpcomingBatches() {
           <p className="text-[#84cfed] font-poppins font-normal text-xs sm:text-xl"></p>
         </div>
         {/*calender*/}
-        <div className="flex flex-col flex-wrap items-center justify-center sm:flex-row sm:gap-8 gap-14">
+        <div className="flex flex-col flex-wrap items-center sm:flex-row sm:gap-8 gap-14">
           {CalendarDetails.map((card, index) => (
             <div key={index} className="drop-shadow-2x">
               <Calender date={card.date} time={card.time} />

@@ -4,6 +4,7 @@ import { ReactComponent as MountainClimbing } from "../../Assets/eighteen week/M
 import { ReactComponent as TirePushing } from "../../Assets/eighteen week/TirePushing.svg";
 import { ReactComponent as TirePushingTop } from "../../Assets/eighteen week/TirePushingTop.svg";
 import { MobileCard } from "./EighteenWeekCards";
+import { Element } from "react-scroll";
 function EighteenWeek({ windowWidth }) {
   console.log(windowWidth);
   const cardDetails = [
@@ -248,122 +249,123 @@ function EighteenWeek({ windowWidth }) {
     // Add more mappings as needed
   };
   return (
-    <section className="bg-[#F2F2F2]">
-      <div className="sm:px-16 sm:py-10 flex flex-col justify-center ">
-        {/* TextSection and right SVG image */}
-        <div className="flex flex-col px-4 py-4">
-          {/* Heaading and svg */}
-          <div className="flex justify-between">
-            <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
-              The 18 Week
-            </h1>
-            <TirePushingTop className="hidden sm:block"/>
-          </div>
-          {/* subHeading */}
-          <h4 className="text-[#B01873] py-4 font-poppins font-semibold text-base sm:text-2xl">
-            Intense bootcamp{" "}
-            <span className="custom-text-color font-poppins font-semibold text-base sm:text-2xl">
-              to make you an assertive designer
-            </span>
-          </h4>
-          {/* Paragraph Content */}
-          <div className="flex items-start justify-between">
-            
-          <p className="custom-text-color text-base lg:whitespace-nowrap text-left">
-            The entire course will be held in weekend to make it feasible for
-            working professionals and college students to attend.
-            {windowWidth < 640 ? (
-              <>
+    <Element name = "Syllabus">
+      <section className="bg-[#F2F2F2]">
+        <div className="px-[2%] py-12 sm:px-[15%] sm:py-24 flex flex-col justify-center ">
+          {/* TextSection and right SVG image */}
+          <div className="flex flex-col py-4">
+            {/* Heaading and svg */}
+            <div className="flex justify-between">
+              <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
+                The 18 Week
+              </h1>
+              <TirePushingTop className="hidden sm:block"/>
+            </div>
+            {/* subHeading */}
+            <h4 className="text-[#B01873] py-4 font-poppins font-semibold text-base sm:text-2xl">
+              Intense bootcamp{" "}
+              <span className="custom-text-color font-poppins font-semibold text-base sm:text-2xl">
+                to make you an assertive designer
+              </span>
+            </h4>
+            {/* Paragraph Content */}
+            <div className="flex items-start justify-between">
+      
+            <p className="custom-text-color text-base lg:whitespace-nowrap text-left">
+              The entire course will be held in weekend to make it feasible for
+              working professionals and college students to attend.
+              {windowWidth < 640 ? (
+                <>
+                  <br></br>
+                  <br></br>
+                </>
+              ) : (
                 <br></br>
-                <br></br>
-              </>
-            ) : (
-              <br></br>
-            )}
-            We are not rigid with the 18 week plan we are flexible enough to
-            extend the duration depends on the students progress{" "}
-          </p>
-         
+              )}
+              We are not rigid with the 18 week plan we are flexible enough to
+              extend the duration depends on the students progress{" "}
+            </p>
+      
+            </div>
+          </div>
+          {/* Grid card section for large screens only */}
+          <div className="hidden lg:block py-2 ">
+            <div className="hidden sm:grid grid-cols-4 gap-4 px-4">
+              {cardDetails.map((card, index) => (
+                <div
+                  className={
+                    // eslint-disable-next-line
+                    index ==
+                    // eslint-disable-next-line
+                    Object.keys(customComponentMap).find((key) => index == key)
+                      ? "flex justify-end"
+                      : null
+                  }
+                  key={index}
+                >
+                  {customComponentMap[index] || (
+                    <EighteenWeekCards
+                      week={card.week}
+                      heading={card.heading}
+                      orderedList={card.orderedList}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Grid only for smaller/medium screens */}
+          <div className="flex flex-col  items-center sm:grid md:grid sm:grid-cols-2 md:grid-cols-3 lg:hidden">
+            <MobileCard
+              week={"Week 1 - 4"}
+              orderedList={[
+                "Warming up",
+                "Know thy users",
+                "Design for business",
+                "UI fundamentals - 1",
+              ]}
+            ></MobileCard>
+            <MobileCard
+              week={"Week 5 - 8"}
+              orderedList={[
+                "UI fundamentals - 2",
+                "Laying out the plan",
+                "Tool - Figma",
+                "Know your first move",
+              ]}
+            ></MobileCard>
+            <MobileCard
+              week={"Week 9 - 12"}
+              orderedList={[
+                "Usability testing",
+                "Into the world of android",
+                "Into the world of iOS",
+                "Websites and app",
+              ]}
+            ></MobileCard>
+            <MobileCard
+              week={"Week 13 - 16"}
+              orderedList={[
+                "Getting intense",
+                "Usability testing - 2",
+                "Warm up for the final showdown",
+                "Final showdown",
+              ]}
+            ></MobileCard>
+            <MobileCard
+              week={"Week 17 - 18"}
+              orderedList={["Get it done", "Placement training"]}
+            ></MobileCard>
+          </div>
+          {/* Download Button */}
+          <div className="sm:hidden flex justify-center py-4">
+            <button className="pink-button font-poppins">
+              Download Syllabus
+            </button>
           </div>
         </div>
-
-        {/* Grid card section for large screens only */}
-        <div className="hidden lg:block py-2 ">
-          <div className="hidden sm:grid grid-cols-4 gap-4 px-4">
-            {cardDetails.map((card, index) => (
-              <div
-                className={
-                  // eslint-disable-next-line
-                  index ==
-                  // eslint-disable-next-line
-                  Object.keys(customComponentMap).find((key) => index == key)
-                    ? "flex justify-end"
-                    : null
-                }
-                key={index}
-              >
-                {customComponentMap[index] || (
-                  <EighteenWeekCards
-                    week={card.week}
-                    heading={card.heading}
-                    orderedList={card.orderedList}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Grid only for smaller/medium screens */}
-        <div className="flex flex-col  sm:grid md:grid sm:grid-cols-2 md:grid-cols-3 lg:hidden">
-          <MobileCard
-            week={"Week 1 - 4"}
-            orderedList={[
-              "Warming up",
-              "Know thy users",
-              "Design for business",
-              "UI fundamentals - 1",
-            ]}
-          ></MobileCard>
-          <MobileCard
-            week={"Week 5 - 8"}
-            orderedList={[
-              "UI fundamentals - 2",
-              "Laying out the plan",
-              "Tool - Figma",
-              "Know your first move",
-            ]}
-          ></MobileCard>
-          <MobileCard
-            week={"Week 9 - 12"}
-            orderedList={[
-              "Usability testing",
-              "Into the world of android",
-              "Into the world of iOS",
-              "Websites and app",
-            ]}
-          ></MobileCard>
-          <MobileCard
-            week={"Week 13 - 16"}
-            orderedList={[
-              "Getting intense",
-              "Usability testing - 2",
-              "Warm up for the final showdown",
-              "Final showdown",
-            ]}
-          ></MobileCard>
-          <MobileCard
-            week={"Week 17 - 18"}
-            orderedList={["Get it done", "Placement training"]}
-          ></MobileCard>
-        </div>
-        {/* Download Button */}
-        <div className="sm:hidden flex justify-center py-4">
-          <button className="pink-button font-poppins">
-            Download Syllabus
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 }
 export default EighteenWeek;

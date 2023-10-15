@@ -4,6 +4,7 @@ import FaqVideoFrame from "./FaqVideoFrame";
 import FaqAccordian from "./FaqAccordian";
 import { ReactComponent as LeftArrow } from "../../Assets/Faq/Nav arrow left.svg";
 import { ReactComponent as RightArrow } from "../../Assets/Faq/Navigation arrow right.svg";
+import { Element } from "react-scroll";
 
 const Faq = () => {
   const scroller = useRef(null);
@@ -63,63 +64,65 @@ const Faq = () => {
   ]
   return (
     // parent Container
-    <div className="sm:py-10">
-      {/* text content */}
-      <div>
-        <h1 className="font-medium text-2xl font-poppins py-4  text-center">
-          Watch our free classes and case studies
-        </h1>
-      </div>
-      {/* video Content and nav buttons */}
-      <div className="flex flex-col px-4 gap-4 relative ">
-        {/* videocontetn */}
-        <div
-          className="flex px-4 gap-4 overflow-x-auto sm:overflow-x-hidden"
-          style={{
-            transform: "translateX(0)", // Initialize with 0 translation
-          }}
-          ref={scroller}
-        >
-          <FaqVideoFrame></FaqVideoFrame>
-          <FaqVideoFrame></FaqVideoFrame>
-          <FaqVideoFrame></FaqVideoFrame>
-          <FaqVideoFrame></FaqVideoFrame>
-          <FaqVideoFrame></FaqVideoFrame>
-          <FaqVideoFrame></FaqVideoFrame>
-        </div>
-        {/* Navigation buttons */}
-        <div className="hidden sm:block text-9xl text-[#7B115D] opacity-10 hover:opacity-100 transition-opacity">
-          <div className="absolute top-0 left-0">
-            {/* left button */}
-            <button className="" onClick={scrollLeft}>
-              <LeftArrow></LeftArrow>
-            </button>
-          </div>
-          {/* right buttons */}
-          <div className="absolute top-0 right-0">
-            <button className="" onClick={scrollRight}>
-              <RightArrow></RightArrow>
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Faq Accordian section */}
-      <div>
+    <Element name= "FAQ">
+      <div className="px-[2%] py-12 sm:px-[15%] sm:py-24">
+        {/* text content */}
         <div>
-          {/* heading */}
-          <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
-            FAQ
+          <h1 className="font-medium text-2xl font-poppins py-4  text-center">
+            Watch our free classes and case studies
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-10">
-            <div className="w-[90%]">
-              {faqContents.map((item,index)=>(
-                <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>
-              ))}
+        </div>
+        {/* video Content and nav buttons */}
+        <div className="flex flex-col gap-4 relative ">
+          {/* videocontetn */}
+          <div
+            className="flex px-4 gap-4 overflow-x-auto sm:overflow-x-hidden"
+            style={{
+              transform: "translateX(0)", // Initialize with 0 translation
+            }}
+            ref={scroller}
+          >
+            <FaqVideoFrame></FaqVideoFrame>
+            <FaqVideoFrame></FaqVideoFrame>
+            <FaqVideoFrame></FaqVideoFrame>
+            <FaqVideoFrame></FaqVideoFrame>
+            <FaqVideoFrame></FaqVideoFrame>
+            <FaqVideoFrame></FaqVideoFrame>
+          </div>
+          {/* Navigation buttons */}
+          <div className="hidden sm:block text-9xl text-[#7B115D] opacity-10 hover:opacity-100 transition-opacity">
+            <div className="absolute top-0 left-0">
+              {/* left button */}
+              <button className="" onClick={scrollLeft}>
+                <LeftArrow></LeftArrow>
+              </button>
+            </div>
+            {/* right buttons */}
+            <div className="absolute top-0 right-0">
+              <button className="" onClick={scrollRight}>
+                <RightArrow></RightArrow>
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Faq Accordian section */}
+        <div>
+          <div>
+            {/* heading */}
+            <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
+              FAQ
+            </h1>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <div className="w-full flex flex-col gap-y-4">
+                {faqContents.map((item,index)=>(
+                  <FaqAccordian key={index} question={item.question} answer={item.answer}></FaqAccordian>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 export default Faq;

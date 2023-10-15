@@ -35,11 +35,19 @@
   background: linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%);
   color: #fff;
   display: flex;
-  padding: 8px 16px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Poppins";
   justify-content: center;
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  cursor: pointer;
 }
 /* Hover state styles */
 .pink-button:hover {

@@ -20,7 +20,7 @@ function NavBar({ navbarRef }) {
     >
       <nav className=" flex  items-center justify-around flex-wrap ">
         <div className=" flex text-white">
-          <LogoSvg></LogoSvg>
+          <LogoSvg className="h-10"></LogoSvg>
         </div>
         <div className="hidden p-4 lg:flex ">
           <ul className="flex gap-6  ">
@@ -38,13 +38,13 @@ function NavBar({ navbarRef }) {
               </Link>
             </li>
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-              Course Fee
+              <Link to= "Course Fee" smooth={true} duration={500} offset={-72}>Course Fee</Link>
             </li>
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-              Syllabus
+              <Link to ="Syllabus" smooth={true} duration={500} offset={-72}>Syllabus</Link>
             </li>
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-              FAQ
+              <Link to= "FAQ" smooth={true} duration={500} offset={-72} >FAQ</Link>
             </li>
           </ul>
         </div>

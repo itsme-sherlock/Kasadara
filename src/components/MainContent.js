@@ -16,7 +16,7 @@ function MainContent(props) {
 
   return (
     <section
-      className="  w-full  text-center "
+      className="  w-full  text-center flex justify-center items-center "
       style={{
         minHeight: `${props.sectionHeight}px`,
         background:
@@ -24,7 +24,7 @@ function MainContent(props) {
         marginTop: `${props.navbarHeight}`,
       }}
     >
-      <div className="flex flex-col w-full h-full justify-center items-center py-10 sm:py-12 ">
+      <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[15%] sm:py-24 ">
         <Grid
           className="opacity-5 absolute "
           style={{ clipPath: `inset(0 0 ${clipHeight} 0)` }}
@@ -33,14 +33,15 @@ function MainContent(props) {
         
 
         {/* mainHeading */}
-        <div className="flex flex-col justify-center sm:px-[20%] sm:py-4">
-          <div className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2 leading-10">
+        <div className="flex flex-col justify-center sm:py-4">
+          <div className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2"
+          style ={{lineHeight : '120%'}}>
             {/* Conditionally render text based on screen size */}
             {props.windowWidth < 640
-              ? "Learn UX UI Design from the industry experts"
-              : "Learn UX UI Design from the industry experts"}
+              ? "Learn UX UI Design from industry experts"
+              : "Learn UX UI Design from industry experts"}
           </div>
-          <div className="text-white font-light sm:font-extralight text-xs sm:text-xl font-poppins opacity-60 ">
+          <div className="text-white py-2 font-light sm:font-extralight text-xs sm:text-xl font-poppins opacity-60 ">
             just in 18 weeks, from beginner to certified
           </div>
         </div>

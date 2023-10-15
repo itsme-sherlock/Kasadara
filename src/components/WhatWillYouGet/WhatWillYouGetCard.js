@@ -4,7 +4,7 @@ function Card({number,heading ,content,svg}){
 
     return(
         
-        <div className="w-44 h-64 xl:w-72 xl:h-80">
+        <div className="min-w-44 h-64 xl:min-w-72 xl:h-80">
             {/* Card number */}
             <div className="bg-[#B01873] hidden sm:bg-transparent w-6 h-6  justify-center rounded-full text-white">{number}</div>
             {/* SVG */}

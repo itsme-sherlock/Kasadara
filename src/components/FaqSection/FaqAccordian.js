@@ -38,7 +38,7 @@ function FaqAccordionItem({ question, answer }) {
     style={isOpen? changeStyleWhenClicked:{}}>
       <div>
         <div>
-          <h3 className="font-normal font-poppins text-sm sm:text-base">{question}</h3>
+          <h3 className="font-bold font-poppins text-sm sm:text-base">{question}</h3>
         </div>
         <AnimatePresence>
           {isOpen && (
