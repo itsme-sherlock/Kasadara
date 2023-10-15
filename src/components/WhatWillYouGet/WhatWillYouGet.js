@@ -103,7 +103,7 @@ function WhatWillYouGet(props) {
         </div>
         {/* cards sction large screen */}
         <div className="hidden xl:block xl:relative mt-28">
-          <div className="flex justify-between gap-10">
+          <div className="flex justify-between gap-10 pb-12">
             {/* Generate cards for the first row */}
             {cards.map(
               (card, index) =>

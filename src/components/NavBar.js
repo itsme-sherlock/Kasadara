@@ -18,8 +18,8 @@ function NavBar({ navbarRef }) {
       data-navbar="sticky"
       ref={navbarRef}
     >
-      <nav className=" flex  items-center justify-around flex-wrap ">
-        <div className=" flex text-white">
+      <nav className=" flex  items-center justify-around flex-wrap px-[2%]  sm:px-[15%]  ">
+        <div className=" flex text-white ">
           <LogoSvg className="h-10"></LogoSvg>
         </div>
         <div className="hidden p-4 lg:flex ">

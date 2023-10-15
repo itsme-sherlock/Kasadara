@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({number,heading ,content,svg}){
+function    Card({number,heading ,content,svg}){
 
     return(
         
@@ -10,7 +10,7 @@ function Card({number,heading ,content,svg}){
             {/* SVG */}
             {svg}
             {/* Heading of the card */}
-            <p className="text-sm font-poppins font-extrabold py-6 text-gray-800">
+            <p className="text-sm font-poppins font-extrabold pt-6 text-gray-800">
                 {heading}
               
             </p>

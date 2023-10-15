@@ -68,7 +68,7 @@ const Faq = () => {
       <div className="px-[2%] py-12 sm:px-[15%] sm:py-24">
         {/* text content */}
         <div>
-          <h1 className="font-medium text-2xl font-poppins py-4  text-center">
+          <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
             Watch our free classes and case studies
           </h1>
         </div>
@@ -91,14 +91,14 @@ const Faq = () => {
           </div>
           {/* Navigation buttons */}
           <div className="hidden sm:block text-9xl text-[#7B115D] opacity-10 hover:opacity-100 transition-opacity">
-            <div className="absolute top-0 left-0">
+            <div className="absolute top-[0.5rem] left-[-12px]">
               {/* left button */}
               <button className="" onClick={scrollLeft}>
                 <LeftArrow></LeftArrow>
               </button>
             </div>
             {/* right buttons */}
-            <div className="absolute top-0 right-0">
+            <div className="absolute top-[0.5rem] right-[-29px]">
               <button className="" onClick={scrollRight}>
                 <RightArrow></RightArrow>
               </button>
@@ -107,10 +107,10 @@ const Faq = () => {
         </div>
         {/* Faq Accordian section */}
         <div>
-          <div>
+          <div className="pt-12">
             {/* heading */}
             <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
-              FAQ
+              Frequently Asked Questions
             </h1>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <div className="w-full flex flex-col gap-y-4">

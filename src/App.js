@@ -10,6 +10,7 @@ import CourseFee from './components/CourseFee/CourseFee';
 import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
 import FaqSection from './components/FaqSection/FaqSection'
 import { useState, useEffect,useRef } from "react";
+import Footer from './components/Footer';
 function App() {
   // conditional rendering with different displays
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -61,6 +62,7 @@ function App() {
       <CourseFee/>
       <EighteenWeek windowWidth={windowWidth}/>
       <FaqSection></FaqSection>
+      <Footer></Footer>
       
 
       
