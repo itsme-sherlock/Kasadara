@@ -12,6 +12,10 @@ function FaqAccordionItem({ question, answer }) {
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
+  const iconVariants = {
+    open: { rotate: 225, originX: 20, originY: 20,  transition: { duration: 0.1,  ease: [0.1, 0.1, 0.1, 0.1] } },
+    closed: { rotate: -270, originX: 20, originY: 20,  transition: { duration: 0.1, ease: [0.1, 0.1, 0.1, 0.1] } },
+  };
   function Icon({ isOpen }) {
    
     return (
@@ -23,8 +27,9 @@ function FaqAccordionItem({ question, answer }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         stroke="currentColor"
-        className={`transition-transform transform flex-shrink-0`}
-         style={{ transform: isOpen ? "rotate(135deg)" : "rotate(0deg)" }}
+        className={`transition-transform transform flex-shrink-0 w-5 h-5 sm:w-10 sm:h-10`}
+        animate={isOpen ? "open" : "closed"}
+        variants={iconVariants}
       >
         <mask
           id="mask0_1611_6030"
@@ -52,9 +57,9 @@ function FaqAccordionItem({ question, answer }) {
       onClick={toggleAccordion}
       style={isOpen ? changeStyleWhenClicked : {}}
     >
-      <div>
-        <div>
-          <h3 className="font-semibold font-poppins text-sm sm:text-2xl pb-6">
+      <div className="flex flex-col justify-center">
+        <div >
+          <h3 className="font-semibold font-poppins text-sm sm:text-2xl">
             {question}
           </h3>
         </div>

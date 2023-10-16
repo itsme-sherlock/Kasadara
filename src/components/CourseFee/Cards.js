@@ -31,7 +31,7 @@ const Card = ({ title, fee, description, gst }) => {
        {/* join our bootcamp button */}
        <div className="sm:mt-4">
         <button
-          className="my-4 pink-button h-[34px] sm:h-[50px] font-semibold text-xs sm:text-sm hover:bg-[#B01873] whitespace-nowrap"
+          className="my-4 pink-button h-[34px] sm:h-[50px]  text-xs sm:text-sm hover:bg-[#B01873] whitespace-nowrap"
         >
           Join our bootcamp
         </button>

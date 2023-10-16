@@ -90,7 +90,7 @@ function WhatWillYouGet(props) {
 
   return (
     <Element name="course-journey" className="h-fit">
-      <div className="flex flex-col px-[2%] py-12 sm:px-[15%] sm:py-24 ">
+      <div className="flex flex-col px-[2%] py-12 sm:px-[10%] sm:py-24 ">
         {/* main heading and subheading */}
         <div className="w-full">
           <h1 className="text-[#323232] font-poppins font-extrabold sm:text-4xl text-2xl">

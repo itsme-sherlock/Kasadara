@@ -65,7 +65,7 @@ const Faq = () => {
   return (
     // parent Container
     <Element name= "FAQ">
-      <div className="px-[2%] py-12 sm:px-[15%] sm:py-24">
+      <div className="px-[2%] py-12 sm:px-[10%] sm:py-24">
         {/* text content */}
         <div>
           <h1 className="font-medium text-2xl sm:text-4xl py-8 text-center">
@@ -108,7 +108,7 @@ const Faq = () => {
         
       </div>
       {/* Faq Accordian section */}
-      <div className="px-[2%] py-12 sm:px-[15%] sm:py-24 bg-[#FAFAFA]">
+      <div className="px-[2%] py-12 sm:px-[10%] sm:py-24 bg-[#FAFAFA]">
           <div className="pt-12 ">
             {/* heading */}
             <h1 className="font-medium text-2xl sm:text-4xl py-8 text-center">

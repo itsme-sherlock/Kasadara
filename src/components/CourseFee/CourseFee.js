@@ -17,7 +17,7 @@ function CourseFee() {
         }}
       >
         {/* for screen size larger than lg */}
-        <div className=" hidden lg:flex items-center lg:px-[15%] lg:py-24 gap-[8.5%]">
+        <div className=" hidden lg:flex items-center lg:px-[10%] lg:py-24 gap-8">
           {/* left section */}
           <div className="flex flex-col py-8 text-left ">
             {/* section heading */}

@@ -25,9 +25,9 @@ function MainContent(props) {
           marginTop: `${props.navbarHeight}`,
         }}
       >
-        <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[15%] sm:py-24 ">
+        <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[10%] sm:py-24 ">
           <Grid
-            className="opacity-2 absolute "
+            className="opacity-2 absolute z-0 "
           />
       
           {/* mainHeading */}
@@ -96,7 +96,7 @@ function MainContent(props) {
                 fill="white"
               />
             </svg>
-            <button className="font-poppins text-white px-4 py-2 bg-[#0F8C41] hover:bg-[#00692A;] transition-all rounded-md text-base font-semibold">
+            <button className="font-poppins text-white px-4 py-2 bg-[#0F8C41] hover:bg-[#00692A;] transition-all rounded-md text-base cursor-pointer z-10">
               Join our bootcamp
             </button>
           </div>
