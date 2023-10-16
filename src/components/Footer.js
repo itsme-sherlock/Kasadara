@@ -3,8 +3,8 @@ import { ReactComponent as LogoFooter } from "../Assets/Logo dark.svg";
 const Footer = () => {
   return (
     <section>
-      <div className="px-[2%] sm:px-[15%] ">
-        <div className="flex justify-between items-center">
+      <div className="px-[2%] sm:px-[15%] py-32">
+        <div className="flex justify-between items-center sm:flex-row flex-col">
           <LogoFooter />
           <div className="flex flex-col items-start">
               <div class="flex flex-wrap justify-center gap-4">

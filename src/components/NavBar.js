@@ -18,9 +18,11 @@ function NavBar({ navbarRef }) {
       data-navbar="sticky"
       ref={navbarRef}
     >
-      <nav className=" flex  items-center justify-around flex-wrap px-[2%]  sm:px-[15%]  ">
-        <div className=" flex text-white ">
-          <LogoSvg className="h-10"></LogoSvg>
+      <nav className=" flex  items-center justify-around flex-wrap px-[2%]  sm:px-[10%]  ">
+        <div className=" flex text-white cursor-pointer">
+          <Link to ="hero" smooth={true} duration={500} offset={-100}>
+            <LogoSvg className="h-10"></LogoSvg>
+          </Link>
         </div>
         <div className="hidden p-4 lg:flex ">
           <ul className="flex gap-6  ">
@@ -29,9 +31,9 @@ function NavBar({ navbarRef }) {
                 Course Journey
               </Link>
             </li>
-            <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
+            {/* <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
               Why Us
-            </li>
+            </li> */}
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
               <Link to="Upcoming Batch" smooth={true} duration={500} offset={-72}>
                 Upcoming Batch
@@ -53,8 +55,8 @@ function NavBar({ navbarRef }) {
             <FontAwesomeIcon icon={faPhone} style={iconStyle} />
             <div className="text-[#84ED9B]">+911234567890</div>
           </div>
-          <div className=" border border-white rounded-md px-4 py-2">
-            <button className="text-white">Get in touch</button>
+          <div className=" border border-white rounded-md px-4 py-2 hover:bg-[#B01873] cursor-pointer hover:transition-all duration-300">
+            <button className="text-white ">Get in touch</button>
           </div>
         </div>
       </nav>

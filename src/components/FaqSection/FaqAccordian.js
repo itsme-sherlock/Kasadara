@@ -23,7 +23,7 @@ function FaqAccordionItem({ question, answer }) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         stroke="currentColor"
-        className={`h-5 w-5 transition-transform transform flex-shrink-0`}
+        className={`transition-transform transform flex-shrink-0`}
          style={{ transform: isOpen ? "rotate(135deg)" : "rotate(0deg)" }}
       >
         <mask
@@ -48,13 +48,13 @@ function FaqAccordionItem({ question, answer }) {
 
   return (
     <div
-      className="rounded-lg cursor-pointer  p-2 sm:p-6 mb-2 flex justify-between"
+      className="rounded-lg cursor-pointer  p-2 sm:p-6 mb-2 flex justify-between bg-white"
       onClick={toggleAccordion}
       style={isOpen ? changeStyleWhenClicked : {}}
     >
       <div>
         <div>
-          <h3 className="font-semibold font-poppins text-sm sm:text-2xl">
+          <h3 className="font-semibold font-poppins text-sm sm:text-2xl pb-6">
             {question}
           </h3>
         </div>

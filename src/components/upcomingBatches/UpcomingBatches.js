@@ -42,9 +42,9 @@ function UpcomingBatches() {
           <p className="text-[#84cfed] font-poppins font-normal text-xs sm:text-lg"></p>
         </div>
         {/*calender*/}
-        <div className="flex flex-col flex-wrap items-center sm:flex-row sm:gap-8 gap-14 pt-12">
+        <div className="flex flex-col flex-wrap items-center justify-between sm:flex-row sm:gap-8 gap-14 pt-12">
           {CalendarDetails.map((card, index) => (
-            <div key={index} className="drop-shadow-2x">
+            <div key={index} className="drop-shadow-2x py-4">
               <Calender date={card.date} time={card.time} />
             </div>
           ))}

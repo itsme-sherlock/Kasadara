@@ -68,7 +68,7 @@ const Faq = () => {
       <div className="px-[2%] py-12 sm:px-[15%] sm:py-24">
         {/* text content */}
         <div>
-          <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
+          <h1 className="font-medium text-2xl sm:text-4xl py-8 text-center">
             Watch our free classes and case studies
           </h1>
         </div>
@@ -76,7 +76,7 @@ const Faq = () => {
         <div className="flex flex-col gap-4 relative ">
           {/* videocontetn */}
           <div
-            className="flex px-4 gap-4 overflow-x-auto sm:overflow-x-hidden"
+            className="flex gap-4 overflow-x-auto sm:overflow-x-hidden"
             style={{
               transform: "translateX(0)", // Initialize with 0 translation
             }}
@@ -105,11 +105,13 @@ const Faq = () => {
             </div>
           </div>
         </div>
-        {/* Faq Accordian section */}
-        <div>
-          <div className="pt-12">
+        
+      </div>
+      {/* Faq Accordian section */}
+      <div className="px-[2%] py-12 sm:px-[15%] sm:py-24 bg-[#FAFAFA]">
+          <div className="pt-12 ">
             {/* heading */}
-            <h1 className="font-semibold text-2xl sm:text-4xl py-8 text-center">
+            <h1 className="font-medium text-2xl sm:text-4xl py-8 text-center">
               Frequently Asked Questions
             </h1>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -121,7 +123,6 @@ const Faq = () => {
             </div>
           </div>
         </div>
-      </div>
     </Element>
   );
 };

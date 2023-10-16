@@ -169,7 +169,7 @@ function EighteenWeek({ windowWidth }) {
     },
     {
       week: "Week 13",
-      heading: "sability testing",
+      heading: "Usability testing",
       orderedList: [
         "Introduction to various Usability methods",
         "Usability testing - Preparation & Execution ",
@@ -178,10 +178,10 @@ function EighteenWeek({ windowWidth }) {
     },
     {
       week: "Week 14",
-      heading: "Usability testing-2",
+      heading: "A.I and Design",
       orderedList: [
-        "Analysing and reporting the usability test findings - Framework",
-        "Re-iterat",
+        "Analysing and reporting the usability test findings - Framework", 
+        "Re-iterate based on the test results/insights"
       ],
     },
     {
@@ -190,55 +190,42 @@ function EighteenWeek({ windowWidth }) {
       orderedList: <MountainClimbing />,
     },
     {
-      week: "Week 2",
-      heading: "Know thy users",
+      week: "Week 15",
+      heading: "Warm up for the Final show down",
       orderedList: [
-        "Qualitative research methods",
-        "Quantitative research methods",
-        "Profiling",
-        "Personas and scenarios",
-        "Intros to Mapping - Empathy",
-        "User Journey Affinity Mapping",
-        "Activity & Exercise",
+        "How to Get started with Portfolio",
+        "UX case study",
+        "Inspirations and best practices",
+        "Connecting the dots - revisions",
+        "Pick the portfolio topicss"
       ],
     },
     {
-      week: "Week 2",
-      heading: "Know thy users",
+      week: "Week 16",
+      heading: "Final show down",
       orderedList: [
-        "Qualitative research methods",
-        "Quantitative research methods",
-        "Profiling",
-        "Personas and scenarios",
-        "Intros to Mapping - Empathy",
-        "User Journey Affinity Mapping",
-        "Activity & Exercise",
+        "Create your portfolio - case studies & UI solutions",
+        "Build your own portfolio site",
+        "1-0-1 Reviews"
       ],
     },
     {
-      week: "Week 2",
-      heading: "Know thy users",
+      week: "Week 17",
+      heading: "Get it done",
       orderedList: [
-        "Qualitative research methods",
-        "Quantitative research methods",
-        "Profiling",
-        "Personas and scenarios",
-        "Intros to Mapping - Empathy",
-        "User Journey Affinity Mapping",
-        "Activity & Exercise",
+        "Presenting designs to stake holders",
+        "Get your portfolio reviewed from our expert panel",
+        "Iterate ",
+        "Resume preparation",
       ],
     },
     {
-      week: "Week 2",
-      heading: "Know thy users",
+      week: "Week 18",
+      heading: "Placement training",
       orderedList: [
-        "Qualitative research methods",
-        "Quantitative research methods",
-        "Profiling",
-        "Personas and scenarios",
-        "Intros to Mapping - Empathy",
-        "User Journey Affinity Mapping",
-        "Activity & Exercise",
+        "Multi level Mock interviews with Industry experts",
+        "Placement training ( do's and dont's) with career counsellor",
+        "Job hunting and networking techniques for the best results."
       ],
     },
   ];
@@ -290,7 +277,7 @@ function EighteenWeek({ windowWidth }) {
           </div>
           {/* Grid card section for large screens only */}
           <div className="hidden lg:block py-2 ">
-            <div className="hidden sm:grid grid-cols-4 gap-4 px-4">
+            <div className="hidden sm:grid grid-cols-4 gap-4">
               {cardDetails.map((card, index) => (
                 <div
                   className={
