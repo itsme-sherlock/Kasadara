@@ -9,7 +9,9 @@ module.exports = {
       'indie-flower':'"Indie Flower"',
       'inter':'"Inter"'
     },
-    extend: {},
+    extend: {
+      borderColor: ['focus'],
+    },
   },
   plugins: [],
 }

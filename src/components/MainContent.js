@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../components/WhatWillYouGet/WhatWillYouGet.css";
 import { ReactComponent as ChatSvg } from "../Assets/Section 2/All we need from you.svg"; // Replace with the actual path to your SVG file
@@ -7,17 +7,25 @@ import { ReactComponent as LustForDesign } from "../Assets/Section 2/Lust for de
 import { ReactComponent as HungerForLearning } from "../Assets/Section 2/Hunger for learning.svg";
 import { ReactComponent as Grid } from "../Assets/Hero section/GRID 2.svg";
 import { Element } from "react-scroll";
+import Modal from '../components/Modal';
 
 function MainContent(props) {
   console.log(props.windowWidth);
   console.log(props.sectionHeight);
   console.log(props.navbarHeight);
-  // Calculate the height for clipping (half of the content)
+  const [showModal, setShowModal] = useState(false);
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
-    <Element name = "hero">
+    <Element name="hero">
       <section
-        className="  w-full  text-center flex justify-center items-center "
+        className="  w-full  text-center flex justify-center items-center -z-20 "
         style={{
           minHeight: `${props.sectionHeight}px`,
           background:
@@ -25,15 +33,15 @@ function MainContent(props) {
           marginTop: `${props.navbarHeight}`,
         }}
       >
-        <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[10%] sm:py-24 ">
-          <Grid
-            className="opacity-2 absolute z-0 "
-          />
-      
+        <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[10%] sm:py-24 z-10 ">
+          <Grid className="opacity-2 absolute -z-10 " />
+
           {/* mainHeading */}
           <div className="flex flex-col justify-center sm:py-4">
-            <div className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2"
-            style ={{lineHeight : '120%'}}>
+            <div
+              className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-2"
+              style={{ lineHeight: "120%" }}
+            >
               {/* Conditionally render text based on screen size */}
               {props.windowWidth < 640
                 ? "Learn UX UI Design from industry experts"
@@ -96,9 +104,13 @@ function MainContent(props) {
                 fill="white"
               />
             </svg>
-            <button className="font-poppins text-white px-4 py-2 bg-[#0F8C41] hover:bg-[#00692A;] transition-all rounded-md text-base cursor-pointer z-10">
+            <button
+              className="font-poppins text-white px-4 py-2 bg-[#0F8C41] hover:bg-[#00692A;] transition-all rounded-md text-base cursor-pointer z-0"
+              onClick={openModal}
+            >
               Join our bootcamp
             </button>
+            <Modal isOpen={showModal} closeModal={closeModal} />
           </div>
         </div>
       </section>
