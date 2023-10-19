@@ -108,7 +108,7 @@ const Faq = () => {
         
       </div>
       {/* Faq Accordian section */}
-      <div className="px-[2%]  sm:px-[10%] sm:pb-24 bg-[#FAFAFA]">
+      <div className="px-[2%]  sm:px-[10%] sm:py-24 bg-[#FAFAFA]">
           <div className="">
             {/* heading */}
             <h1 className="font-medium text-2xl sm:text-4xl pb-8 text-center">

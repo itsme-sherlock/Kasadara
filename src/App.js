@@ -11,6 +11,7 @@ import EighteenWeek from './components/EighteenWeeks/EighteenWeek';
 import FaqSection from './components/FaqSection/FaqSection'
 import { useState, useEffect,useRef } from "react";
 import Footer from './components/Footer';
+import CopyRight from './components/CopyRightTab';
 function App() {
   // conditional rendering with different displays
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -63,6 +64,7 @@ function App() {
       <EighteenWeek windowWidth={windowWidth}/>
       <FaqSection></FaqSection>
       <Footer></Footer>
+      <CopyRight></CopyRight>
       
 
       

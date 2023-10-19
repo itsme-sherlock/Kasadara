@@ -110,7 +110,7 @@ function MainContent(props) {
             >
               Join our bootcamp
             </button>
-            <Modal isOpen={showModal} closeModal={closeModal} />
+            <Modal isOpen={showModal} closeModal={closeModal} heading={'Join our bootcamp'} />
           </div>
         </div>
       </section>
