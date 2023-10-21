@@ -59,7 +59,7 @@ function NavBar({ navbarRef }) {
             </li>
           </ul>
         </div>
-        <div className="items-center flex-wrap flex-shrink gap-6 hidden lg:flex">
+        <div className="items-center flex-wrap flex-shrink gap-6 hidden xl:flex ">
           <div className="flex items-center flex-wrap  flex-shrink">
             <FontAwesomeIcon icon={faPhone} style={iconStyle} />
             <div className="text-[#84ED9B]">+911234567890</div>

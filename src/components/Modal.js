@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./WhatWillYouGet/WhatWillYouGet.css";
 import { ReactComponent as Close } from "../Assets/Modal/close.svg";
+import ReactDOM from "react-dom";
 
 const Modal = ({ isOpen, closeModal }) => {
   const [name, setName] = useState("");
@@ -38,8 +39,8 @@ const Modal = ({ isOpen, closeModal }) => {
   };
   if (!isOpen) return null;
 
-  return (
-    <div className="modal ">
+  return ReactDOM.createPortal (
+    <div className="modal z-[100] ">
       <div className="modal-content w-full sm:w-[44%]">
         {/* Modal content goes here */}
         <div className="flex justify-between items-center px-8 py-6">
@@ -119,7 +120,8 @@ const Modal = ({ isOpen, closeModal }) => {
           </div>
         </form>
       </div>
-    </div>
+    </div>,
+    document.getElementById("modal-root")
   );
 };
 
