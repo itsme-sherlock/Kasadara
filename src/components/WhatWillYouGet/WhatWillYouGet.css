@@ -26,7 +26,6 @@
     --K-grad,
     linear-gradient(219deg, #7b115d -9.77%, #591b76 83.29%)
   );
- 
 }
 /*---------------COURSEfEE.JS---------------------*/
 .pink-button {
@@ -39,7 +38,7 @@
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  
+
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: "Poppins";
@@ -103,9 +102,10 @@
 }
 
 /* modal.css */
+/* modal.css */
 .modal {
   position: fixed;
-  top: 0;
+  top: 0; /* Ensure the modal is at the top of the viewport */
   left: 0;
   width: 100%;
   height: 100%;
@@ -113,6 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto; /* Allow the modal to be scrollable if needed */
 }
 
 .modal-content {
@@ -120,8 +121,13 @@
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Ensure the modal doesn't exceed the width of the viewport */
+  overflow: auto; /* Enable scrolling within the modal content */
+  position: relative;
+  /* transform: translate(-50%, -50%); Center the modal */
 }
+
 input:focus {
-  border-color: #591B76;
+  border-color: #591b76;
   outline: none; /* Optional: Remove the default browser focus outline */
 }

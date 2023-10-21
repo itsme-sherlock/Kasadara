@@ -1,5 +1,16 @@
 import React from "react";
+import { useState } from "react";
+import Modal from "../Modal";
 function Calendar({date,time}) {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className="w-56 h-48 sm:w-72 sm:h-72 rounded-xl relative bg-white drop-shadow-2xl">
       {/* two horns */}
@@ -21,7 +32,8 @@ function Calendar({date,time}) {
       <div className="flex flex-col items-center justify-center h-[75%]">
         <p className="font-bold text-2xl sm:text-5xl font-poppins text-[#591B76] tracking-widest">{date}</p>
         <p className="font-medium text-xs sm:text-base font-poppins text-[#591B76] tracking-widest pb-6 ">{time}</p>
-        <button className="bg-[#0F8C41] hover:bg-[#00692A;] text-white px-4 py-2 rounded-md">Request a call back</button>
+        <button className="bg-[#0F8C41] hover:bg-[#00692A;] text-white px-4 py-2 rounded-md" onClick={openModal} >Request a call back</button>
+        <Modal isOpen={showModal} closeModal={closeModal} heading={'Request a call back'} />
       </div>
     </div>
   );

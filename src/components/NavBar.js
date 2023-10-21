@@ -1,21 +1,25 @@
 // src/components/NavBar.js
 
 import React from "react";
+import { useState } from "react";
+import Modal from "../components/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ReactComponent as LogoSvg } from "../Assets/Logo light.svg";
 import { Link } from "react-scroll";
+
 // import { useState } from "react";
 function NavBar({ navbarRef }) {
-  // const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  // const openModal = () => {
-  //   setShowModal(true);
-  // };
+  const openModal = () => {
+    setShowModal(true);
+  };
 
-  // const closeModal = () => {
-  //   setShowModal(false);
-  // };
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   const iconStyle = {
     color: "#84ED9B", // Change 'red' to your desired color
   };
@@ -65,7 +69,8 @@ function NavBar({ navbarRef }) {
             <div className="text-[#84ED9B]">+911234567890</div>
           </div>
           <div className=" border border-white rounded-md px-4 py-2 hover:bg-[#B01873] cursor-pointer hover:transition-all duration-300">
-            <button className="text-white ">Get in touch</button>
+            <button className="text-white " onClick={openModal}>Get in touch</button>
+            <Modal isOpen={showModal} closeModal={closeModal} heading={'Get in touch'} />
           </div>
         </div>
       </nav>

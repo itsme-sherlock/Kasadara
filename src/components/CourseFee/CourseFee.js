@@ -4,9 +4,22 @@ import "../WhatWillYouGet/WhatWillYouGet.css";
 import { ReactComponent as GraduateHatSvg } from "../../Assets/CourseFees/SchoolSvg.svg";
 import { ReactComponent as WriteToUsSvg } from "../../Assets/CourseFees/border_color.svg";
 import { Element } from "react-scroll";
+import { useState } from "react";
+import Modal from "../Modal";
 
 function CourseFee() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
+    
     <Element name="Course Fee">
       <section
         className="text-center gap-10    "
@@ -70,10 +83,11 @@ function CourseFee() {
                   Colleges students can avail scholarships
                 </p>
                 <div className="flex gap-1 items-center  ">
-                  <button className="pink-button whitespace-nowrap pink-button:hover">
+                  <button className="pink-button whitespace-nowrap pink-button:hover" onClick={openModal}>
                     <WriteToUsSvg></WriteToUsSvg>
                     Write to us
                   </button>
+                  <Modal isOpen={showModal} closeModal={closeModal} heading={'Write to us'} />
                 </div>
               </div>
             </div>
@@ -88,9 +102,9 @@ function CourseFee() {
                   Colleges students can<br className="sm:block hidden"></br>{" "}
                   avail scholarships
                 </p>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center" >
                   <WriteToUsSvg></WriteToUsSvg>
-                  <button className="pink-button whitespace-nowrap">
+                  <button className="pink-button whitespace-nowrap" onClick={openModal}> 
                     Write to us
                   </button>
                 </div>
@@ -172,10 +186,11 @@ function CourseFee() {
                 Colleges students can avail scholarships
               </p>
               <div className="flex gap-1 items-center  ">
-                <button className="pink-button whitespace-nowrap pink-button:hover">
+                <button className="pink-button whitespace-nowrap pink-button:hover" >
                   <WriteToUsSvg></WriteToUsSvg>
                   Write to us
                 </button>
+                <Modal isOpen={showModal} closeModal={closeModal} heading={'Write to us'} />
               </div>
             </div>
           </div>

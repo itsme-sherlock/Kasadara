@@ -3,6 +3,7 @@ import "../WhatWillYouGet/WhatWillYouGet.css";
 import Calender from "./Calendar";
 import { Element } from "react-scroll";
 function UpcomingBatches() {
+  
   const CalendarDetails = [
     {
       date: "SEP 10",

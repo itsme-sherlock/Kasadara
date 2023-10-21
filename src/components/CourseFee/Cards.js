@@ -1,6 +1,17 @@
 import React from "react";
+import { useState } from "react";
+import Modal from "../Modal";
 import "../WhatWillYouGet/WhatWillYouGet.css";
 const Card = ({ title, fee, description, gst }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     // Card container
     <div className=" bg-gray-200 rounded-lg flex flex-col items-center sm:items-start px-3 py-3 sm:px-6 sm:py-6">
@@ -32,9 +43,11 @@ const Card = ({ title, fee, description, gst }) => {
        <div className="sm:mt-4">
         <button
           className="my-4 pink-button h-[34px] sm:h-[50px]  text-xs sm:text-sm hover:bg-[#B01873] whitespace-nowrap"
+          onClick={openModal}
         >
           Join our bootcamp
         </button>
+        <Modal isOpen={showModal} closeModal={closeModal} heading={'Join our bootcamp'} />
       </div>
     </div>
   );

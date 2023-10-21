@@ -4,10 +4,14 @@ import "./WhatWillYouGet/WhatWillYouGet.css";
 import { ReactComponent as Close } from "../Assets/Modal/close.svg";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isOpen, closeModal }) => {
+const Modal = ({ isOpen, closeModal,heading }) => {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
+  const [writeToUs, setWriteToUs] = useState("");
+  const [portfolio, setPortfolio] = useState("");
+
+  
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -27,12 +31,39 @@ const Modal = ({ isOpen, closeModal }) => {
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-  const handleSubmit = (event) => {
+  const handleWriteToUs = (event) => {
+    setWriteToUs(event.target.value);
+  };
+  const handlePortfolio = (event) => {
+    setPortfolio(event.target.value);
+  };
+  const handleSubmit = async (event) => {
+    
     event.preventDefault();
     // You can access the name and mobile values here
     console.log("Name:", name);
     console.log("Mobile:", mobile);
     console.log("Email:", email);
+    try {
+      const response = await fetch("/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, mobile, email }),
+      });
+  
+      if (response.ok) {
+        // The form was successfully submitted
+        console.log("Form submitted successfully!");
+        closeModal();
+      } else {
+        // Handle errors, e.g., display an error message to the user
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
     // You can also perform any additional actions, such as closing the modal
 
     closeModal();
@@ -40,11 +71,11 @@ const Modal = ({ isOpen, closeModal }) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal (
-    <div className="modal z-[100] ">
-      <div className="modal-content w-full sm:w-[44%]">
+    <div className="modal z-[100]">
+      <div className={`modal-content w-full sm:w-[44%] sm:${heading==='Write to us'?'top-20':'top-0'}`}>
         {/* Modal content goes here */}
         <div className="flex justify-between items-center px-8 py-6">
-          <h1 className="font-poppins text-2xl font-semibold">Contact Us</h1>
+          <h1 className="font-poppins text-2xl font-semibold">{heading}</h1>
           <Close className="text-2xl font-semibold cursor-pointer" onClick={closeModal}>
             
           </Close>
@@ -97,7 +128,7 @@ const Modal = ({ isOpen, closeModal }) => {
           {/* email */}
           <div className="flex flex-col items-start gap-y-2">
             <label htmlFor="email" className="font-poppins text-xl font-normal">
-              <span className="text-red-700 ">*</span>Email
+              Email
             </label>
             <input
               type="email"
@@ -108,6 +139,38 @@ const Modal = ({ isOpen, closeModal }) => {
               required
               onChange={handleEmailChange}
             />
+          </div>
+          {/* Write to us */}
+          <div className={` flex-col items-start gap-y-2 ${heading==='Write to us' ? 'flex':'hidden'}`}>
+            <label htmlFor="email" className="font-poppins text-xl font-normal">
+            <span className="text-red-700 ">*</span>Why do you need a scholarship?
+            </label>
+            <input
+              type="text"
+              id="writeToUs"
+              className="w-full rounded-lg py-2 px-3 focus:border-[#591B76] focus:border-2 border border-black h-40"
+              value={writeToUs}
+              onChange={handleWriteToUs}
+            />
+              <p className="font-poppins text-sm font-normal">
+              Minimum 100 characters.
+            </p>
+          </div>
+          {/* Portfolio */}
+          <div className={` flex-col items-start gap-y-2 ${heading==='Write to us' ? 'flex':'hidden'}`}>
+            <label htmlFor="email" className="font-poppins text-xl font-normal">
+            Portfolio Link (if any)?
+            </label>
+            <input
+              type="url"
+              id="portfolio"
+              className="w-full rounded-lg py-2 px-3 focus:border-[#591B76] focus:border-2 border border-black"
+              value={portfolio}
+              onChange={handlePortfolio}
+            />
+              <p className="font-poppins text-sm font-normal">
+              Minimum 100 characters.
+            </p>
           </div>
           {/* submit button */}
           <div className="flex justify-end py-6">
