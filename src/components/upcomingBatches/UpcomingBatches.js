@@ -2,6 +2,7 @@ import React from "react";
 import "../WhatWillYouGet/WhatWillYouGet.css";
 import Calender from "./Calendar";
 import { Element } from "react-scroll";
+
 function UpcomingBatches() {
   
   const CalendarDetails = [
@@ -24,7 +25,7 @@ function UpcomingBatches() {
   ];
   return (
     <Element name='Upcoming Batch'>
-      <div className=" bg-[#F2F2F2] px-[2%] py-12 sm:px-[10%] sm:py-24">
+      <div className=" bg-[#F2F2F2] px-[5%] py-12 sm:px-[10%] sm:py-24">
         <div className=" text-center sm:text-left flex-col flex sm:items-start   ">
           {/*Element heading*/} 
           <h1 className="text-black  font-poppins font-extrabold text-2xl sm:text-4xl ">

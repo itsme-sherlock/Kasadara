@@ -72,7 +72,7 @@ const Modal = ({ isOpen, closeModal,heading }) => {
 
   return ReactDOM.createPortal (
     <div className="modal z-[100]">
-      <div className={`modal-content w-full sm:w-[44%] sm:${heading==='Write to us'?'top-20':'top-0'}`}>
+      <div className={`modal-content w-full sm:w-[44%] top-48 sm:${heading==='Write to us'?'top-20':'top-0'}`}>
         {/* Modal content goes here */}
         <div className="flex justify-between items-center px-8 py-6">
           <h1 className="font-poppins text-2xl font-semibold">{heading}</h1>

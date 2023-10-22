@@ -238,7 +238,7 @@ function EighteenWeek({ windowWidth }) {
   return (
     <Element name = "Syllabus">
       <section className="bg-[#F2F2F2]">
-        <div className="px-[2%] py-12 sm:px-[10%] sm:py-24 flex flex-col justify-center ">
+        <div className="px-[5%] py-12 sm:px-[10%] sm:py-24 flex flex-col justify-center ">
           {/* TextSection and right SVG image */}
           <div className="flex flex-col py-4">
             {/* Heaading and svg */}

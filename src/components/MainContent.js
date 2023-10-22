@@ -33,7 +33,7 @@ function MainContent(props) {
           marginTop: `${props.navbarHeight}`,
         }}
       >
-        <div className="flex flex-col w-full h-full justify-center items-center px-[2%] py-12 sm:px-[10%] sm:py-24 z-10 ">
+        <div className="flex flex-col w-full h-full justify-center items-center px-[5%] py-12 sm:px-[10%] sm:py-24 z-10 ">
           <Grid className="opacity-2 absolute -z-10 " />
 
           {/* mainHeading */}

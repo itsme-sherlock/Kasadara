@@ -31,7 +31,7 @@ function NavBar({ navbarRef }) {
       data-navbar="sticky"
       ref={navbarRef}
     >
-      <nav className=" flex  items-center sm:justify-between justify-center flex-wrap px-[2%] sm:px-[10%]  ">
+      <nav className=" flex  items-center sm:justify-between justify-center flex-wrap px-[5%] sm:px-[10%]  ">
         <div className=" flex text-white cursor-pointer ">
           <Link to ="hero" smooth={true} duration={500} offset={-100}>
             <LogoSvg className=""></LogoSvg>

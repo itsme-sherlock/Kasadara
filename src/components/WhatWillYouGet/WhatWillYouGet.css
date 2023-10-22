@@ -124,9 +124,15 @@
   max-width: 90%; /* Ensure the modal doesn't exceed the width of the viewport */
   overflow: auto; /* Enable scrolling within the modal content */
   position: relative;
+
   /* transform: translate(-50%, -50%); Center the modal */
 }
-
+/* Use the @media declaration for media queries */
+/* @media (min-width: 640px) {
+  .modal-content {
+    top: 0px;
+  }
+} */
 input:focus {
   border-color: #591b76;
   outline: none; /* Optional: Remove the default browser focus outline */

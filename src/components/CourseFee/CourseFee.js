@@ -19,7 +19,6 @@ function CourseFee() {
   };
 
   return (
-    
     <Element name="Course Fee">
       <section
         className="text-center gap-10    "
@@ -83,11 +82,18 @@ function CourseFee() {
                   Colleges students can avail scholarships
                 </p>
                 <div className="flex gap-1 items-center  ">
-                  <button className="pink-button whitespace-nowrap pink-button:hover" onClick={openModal}>
+                  <button
+                    className="pink-button whitespace-nowrap pink-button:hover"
+                    onClick={openModal}
+                  >
                     <WriteToUsSvg></WriteToUsSvg>
                     Write to us
                   </button>
-                  <Modal isOpen={showModal} closeModal={closeModal} heading={'Write to us'} />
+                  <Modal
+                    isOpen={showModal}
+                    closeModal={closeModal}
+                    heading={"Write to us"}
+                  />
                 </div>
               </div>
             </div>
@@ -102,9 +108,12 @@ function CourseFee() {
                   Colleges students can<br className="sm:block hidden"></br>{" "}
                   avail scholarships
                 </p>
-                <div className="flex gap-2 items-center" >
-                  <WriteToUsSvg></WriteToUsSvg>
-                  <button className="pink-button whitespace-nowrap" onClick={openModal}> 
+                <div className="flex gap-2 items-center">
+                  <button
+                    className="pink-button whitespace-nowrap"
+                    onClick={openModal}
+                  >
+                    <WriteToUsSvg></WriteToUsSvg>
                     Write to us
                   </button>
                 </div>
@@ -137,7 +146,7 @@ function CourseFee() {
           </div>
         </div>
         {/* screen size less than lg */}
-        <div className="lg:hidden  px-[2%] py-12">
+        <div className="lg:hidden  px-[5%] py-12">
           {/* section heading */}
           <div className="">
             <h1 className="text-[#D0D0D0] font-poppins font-medium text-2xl sm:text-5xl text-left">
@@ -186,11 +195,18 @@ function CourseFee() {
                 Colleges students can avail scholarships
               </p>
               <div className="flex gap-1 items-center  ">
-                <button className="pink-button whitespace-nowrap pink-button:hover" >
+                <button
+                  className="pink-button whitespace-nowrap pink-button:hover"
+                  onClick={openModal}
+                >
                   <WriteToUsSvg></WriteToUsSvg>
                   Write to us
                 </button>
-                <Modal isOpen={showModal} closeModal={closeModal} heading={'Write to us'} />
+                <Modal
+                  isOpen={showModal}
+                  closeModal={closeModal}
+                  heading={"Write to us"}
+                />
               </div>
             </div>
           </div>
