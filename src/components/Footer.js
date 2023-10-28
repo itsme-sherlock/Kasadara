@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as LogoFooter } from "../Assets/Logo dark.svg";
-import { ReactComponent as FB } from "../Assets/footer/Fb.svg";
+// import { ReactComponent as FB } from "../Assets/footer/Fb.svg";
 import { ReactComponent as Insta } from "../Assets/footer/Insta.svg";
 import { ReactComponent as Linkedin } from "../Assets/footer/Linkedin.svg";
 const Footer = () => {
