@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <div className="">
               <div>+91 9876 543 210</div>
-              <div>help@kasadara.com</div>
+              <div>info@kasadara.com</div>
             </div>
           </div>
         </div>
