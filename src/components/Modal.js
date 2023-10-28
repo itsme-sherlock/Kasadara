@@ -168,9 +168,6 @@ const Modal = ({ isOpen, closeModal,heading }) => {
               value={portfolio}
               onChange={handlePortfolio}
             />
-              <p className="font-poppins text-sm font-normal">
-              Minimum 100 characters.
-            </p>
           </div>
           {/* submit button */}
           <div className="flex justify-end py-6">

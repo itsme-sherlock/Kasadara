@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactComponent as LogoFooter } from "../Assets/Logo dark.svg";
-import { ReactComponent as FB } from "../Assets/footer/fb.svg";
-import { ReactComponent as Insta } from "../Assets/footer/insta.svg";
-import { ReactComponent as Linkedin } from "../Assets/footer/linkedin.svg";
+import { ReactComponent as FB } from "../Assets/footer/Fb.svg";
+import { ReactComponent as Insta } from "../Assets/footer/Insta.svg";
+import { ReactComponent as Linkedin } from "../Assets/footer/Linkedin.svg";
 const Footer = () => {
   return (
     <section>
@@ -19,13 +19,13 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-y-5">
             <div class="flex flex-wrap justify-center gap-4">
               <a href="https://www.instagram.com/ux.kasadara/" target="_blank" rel="noreferrer">
-                <FB className="w-8 h-8 bg-gray-300"></FB>
+                <FB className="w-8 h-8"></FB>
               </a>
               <a href="https://www.instagram.com/ux.kasadara/">
-                <Insta className="w-8 h-8 bg-gray-300"></Insta>
+                <Insta className="w-8 h-8"></Insta>
               </a>
               <a href="https://www.linkedin.com/company/kasadara-school/">
-                <Linkedin className="w-8 h-8 bg-gray-300"></Linkedin>
+                <Linkedin className="w-8 h-8"></Linkedin>
               </a>
             </div>
             <div className="">

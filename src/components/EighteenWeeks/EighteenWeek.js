@@ -47,14 +47,15 @@ function EighteenWeek({ windowWidth }) {
     },
     {
       week: "Week 4",
-      heading: "Design for Business",
+      heading: "UI fundamentals - 1",
       orderedList: [
-        "Innovations - Radical and Incremental",
-        "Stake holder interview.",
-        "Competitor analysis",
-        "Aligning with business goals",
-        "Product  (Vs) Service",
-        "Activity for the week",
+        "Design laws & UX myths",
+        "Usability Criteria & Heuristics",
+        "Constraints and Errors",
+        "Affordance, signifiers and metaphors",
+        "Psychology of designs - PET",
+        "Colour Theories  & Schemes combination",
+        "Accessible colors - intro",
       ],
     },
 
@@ -180,8 +181,8 @@ function EighteenWeek({ windowWidth }) {
       week: "Week 14",
       heading: "A.I and Design",
       orderedList: [
-        "Analysing and reporting the usability test findings - Framework", 
-        "Re-iterate based on the test results/insights"
+        "Analysing and reporting the usability test findings - Framework",
+        "Re-iterate based on the test results/insights",
       ],
     },
     {
@@ -197,7 +198,7 @@ function EighteenWeek({ windowWidth }) {
         "UX case study",
         "Inspirations and best practices",
         "Connecting the dots - revisions",
-        "Pick the portfolio topicss"
+        "Pick the portfolio topicss",
       ],
     },
     {
@@ -206,7 +207,7 @@ function EighteenWeek({ windowWidth }) {
       orderedList: [
         "Create your portfolio - case studies & UI solutions",
         "Build your own portfolio site",
-        "1-0-1 Reviews"
+        "1-0-1 Reviews",
       ],
     },
     {
@@ -225,7 +226,7 @@ function EighteenWeek({ windowWidth }) {
       orderedList: [
         "Multi level Mock interviews with Industry experts",
         "Placement training ( do's and dont's) with career counsellor",
-        "Job hunting and networking techniques for the best results."
+        "Job hunting and networking techniques for the best results.",
       ],
     },
   ];
@@ -236,7 +237,7 @@ function EighteenWeek({ windowWidth }) {
     // Add more mappings as needed
   };
   return (
-    <Element name = "Syllabus">
+    <Element name="Syllabus">
       <section className="bg-[#F2F2F2]">
         <div className="px-[5%] py-12 sm:px-[10%] sm:py-24 flex flex-col justify-center ">
           {/* TextSection and right SVG image */}
@@ -246,7 +247,7 @@ function EighteenWeek({ windowWidth }) {
               <h1 className="custom-text-color text-[#B01873] font-poppins font-semibold text-4xl text-left sm:text-8xl">
                 The 18 Week
               </h1>
-              <TirePushingTop className="hidden sm:block"/>
+              <TirePushingTop className="hidden sm:block" />
             </div>
             {/* subHeading */}
             <h4 className="text-[#B01873] py-4 font-poppins font-semibold text-base sm:text-2xl">
@@ -257,22 +258,20 @@ function EighteenWeek({ windowWidth }) {
             </h4>
             {/* Paragraph Content */}
             <div className="flex items-start justify-between">
-      
-            <p className="custom-text-color text-base lg:whitespace-nowrap text-left">
-              The entire course will be held in weekend to make it feasible for
-              working professionals and college students to attend.
-              {windowWidth < 640 ? (
-                <>
+              <p className="custom-text-color text-base lg:whitespace-nowrap text-left">
+                The entire course will be held in weekend to make it feasible
+                for working professionals and college students to attend.
+                {windowWidth < 640 ? (
+                  <>
+                    <br></br>
+                    <br></br>
+                  </>
+                ) : (
                   <br></br>
-                  <br></br>
-                </>
-              ) : (
-                <br></br>
-              )}
-              We are not rigid with the 18 week plan we are flexible enough to
-              extend the duration depends on the students progress{" "}
-            </p>
-      
+                )}
+                We are not rigid with the 18 week plan we are flexible enough to
+                extend the duration depends on the students progress{" "}
+              </p>
             </div>
           </div>
           {/* Grid card section for large screens only */}

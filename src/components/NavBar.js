@@ -59,7 +59,7 @@ function NavBar({ navbarRef }) {
               <Link to ="Syllabus" smooth={true} duration={500} offset={-72}>Syllabus</Link>
             </li>
             <li className="text-[#D0D0D0] hover:text-white cursor-pointer">
-              <Link to= "FAQ" smooth={true} duration={500} offset={-72} >FAQ</Link>
+              <Link to= "FAQ" smooth={true} duration={500} offset={400} >FAQ</Link>
             </li>
           </ul>
         </div>
